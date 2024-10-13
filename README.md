@@ -1,6 +1,6 @@
 # Szkolenie "Podstawy Pythona"
 
-Repozytorium zawiera materiały ze [szkolenia z podstaw Pythona](https://jsystems.pl/szkolenia-python;programowanie_w_jezyku_python.szczegoly) (2024-09-09 - 2024-09-13)
+Repozytorium zawiera materiały ze [szkolenia z podstaw Pythona](https://jsystems.pl/szkolenia-python;programowanie_w_jezyku_python.szczegoly) (2024-10-14 - 2024-10-18)
 
 ## Środowisko pracy
 
@@ -15,7 +15,7 @@ Repozytorium zawiera materiały ze [szkolenia z podstaw Pythona](https://jsystem
 
 ## Kontakt z prowadzącym
 
-- [mail](mailto:lukasz@prokulski.science?subject=Szkolenie%20Python%20wrzesien%202024)
+- [mail](mailto:lukasz@prokulski.science?subject=Szkolenie%20Python%pazdziernik%202024)
 - [www](https://prokulski.science)
 - [blog](https://blog.prokulski.science)
 - [newsletter](https://www.subscribepage.com/daneanalizy)
