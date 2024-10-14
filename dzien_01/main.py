@@ -221,9 +221,12 @@
 
 # for i in range(4,10,2): # range(start=4, stop=10, step=2)
 #     print(i)
-    
+
 # print("po pętli", i)
 
 #### ZADANIE 6
 
 # Wyświetl 20 kolejnych potęg liczby 2, czyli 2 do potęgi p, gdzie p jest od 0 do 19.
+
+for p in range(20):
+    print(f"2 do potęgi {p} = {2**p}")
