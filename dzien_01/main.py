@@ -184,32 +184,46 @@
 #  >= 40 otyłość III stopnia (chorobliwa)
 
 
-masa = input("Podaj swoją masę w kg: ")
-masa = float(masa)
+# masa = input("Podaj swoją masę w kg: ")
+# masa = float(masa)
 
-wzrost = input("Podaj swój wzrost w cm: ")
-wzrost = float(wzrost)
-wzrost = wzrost / 100
+# wzrost = input("Podaj swój wzrost w cm: ")
+# wzrost = float(wzrost)
+# wzrost = wzrost / 100
 
-bmi = masa / wzrost**2
+# bmi = masa / wzrost**2
 
-if bmi <= 16:
-    bmi_comment = "wygłodzenie"
-elif bmi <= 17:
-    bmi_comment = "wychudzenie"
-elif bmi <= 18.5:
-    bmi_comment = "niedowagę"
-elif bmi <= 25:
-    bmi_comment = "pożądaną masa ciała"
-elif bmi <= 30:
-    bmi_comment = "nadwagę"
-elif bmi <= 35:
-    bmi_comment = "otyłość I stopnia"
-elif bmi <= 40:
-    bmi_comment = "otyłość II stopnia (duża)"
-else:
-    bmi_comment = "otyłość III stopnia (chorobliwa)"
+# if bmi <= 16:
+#     bmi_comment = "wygłodzenie"
+# elif bmi <= 17:
+#     bmi_comment = "wychudzenie"
+# elif bmi <= 18.5:
+#     bmi_comment = "niedowagę"
+# elif bmi <= 25:
+#     bmi_comment = "pożądaną masa ciała"
+# elif bmi <= 30:
+#     bmi_comment = "nadwagę"
+# elif bmi <= 35:
+#     bmi_comment = "otyłość I stopnia"
+# elif bmi <= 40:
+#     bmi_comment = "otyłość II stopnia (duża)"
+# else:
+#     bmi_comment = "otyłość III stopnia (chorobliwa)"
 
-print(
-    f"\nTwój wynik BMI:\n- przy wzroście {wzrost} cm\n- wadze {masa} kg\nto {bmi:.2f}, co oznacza {bmi_comment}"
-)
+# print(
+#     f"\nTwój wynik BMI:\n- przy wzroście {wzrost} cm\n- wadze {masa} kg\nto {bmi:.2f}, co oznacza {bmi_comment}"
+# )
+
+
+## PĘTLE
+
+# print("przed pętlą", i)
+
+# for i in range(4,10,2): # range(start=4, stop=10, step=2)
+#     print(i)
+    
+# print("po pętli", i)
+
+#### ZADANIE 6
+
+# Wyświetl 20 kolejnych potęg liczby 2, czyli 2 do potęgi p.
