@@ -58,3 +58,13 @@
 
 # Napisz program, który pobierze od użytkownika imię i nazwisko,
 # a potem wypisze w konsoli pozdrowienie "Witaj IMIĘ NAZWISKO!"
+
+# imie = input("Podaj imię: ")
+# nazwisko = input("Podaj nazwisko: ")
+# print("Witaj", imie, nazwisko, "!")
+
+# # f-string - sposób na sklejanie tekstu ze zmiennymi
+# print(f"Witaj {nazwisko} {imie}!")
+
+# # formatowanie przez .format()
+# print("Witaj {} {}!".format(imie, nazwisko))
