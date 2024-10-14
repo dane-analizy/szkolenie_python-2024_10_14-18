@@ -95,16 +95,53 @@
 # wzrost ** 2
 
 
-masa = input("Podaj swoją masę w kg: ")
-masa = float(masa)
+# masa = input("Podaj swoją masę w kg: ")
+# masa = float(masa)
 
-wzrost = input("Podaj swój wzrost w cm: ")
-wzrost = float(wzrost)
-wzrost = wzrost / 100
+# wzrost = input("Podaj swój wzrost w cm: ")
+# wzrost = float(wzrost)
+# wzrost = wzrost / 100
 
-bmi = masa / wzrost**2
+# bmi = masa / wzrost**2
 
-# bmi = round(bmi, 2)
+# # bmi = round(bmi, 2)
 
-print(f"Twoje BMI wynosi: {bmi:.2f}")
-print(f"A zmienna {bmi=}")
+# print(f"Twoje BMI wynosi: {bmi:.2f}")
+# print(f"A zmienna {bmi=}")
+
+
+## WARUNKI - if
+
+# operatory matematyczne
+
+# +
+# -
+# *
+# /
+# **
+
+# x = 10
+# y = 3
+# print(x // y) # ile razy y całkowicie mieści się w x
+# print(x % y) # reszta z dzielenia
+
+# czy liczba jest parzysta: jeżeli x % 2 jest równa 0 to liczba jest parzysta
+# print(1 % 2)
+# print(2 % 2)
+# print(3 % 2)
+# print(4 % 2)
+
+
+# jeżeli x % 2 jest równa 0 to liczba jest parzysta
+# if x % 2 equals 0 then even else odd
+
+x = 3
+if x % 2 == 0:
+    print("parzysta")
+    print("parzysta po raz 2")
+    print("parzysta po raz 3")
+else:
+    print("nieparzysta")
+    print("nieparzysta po raz 2")
+    print("nieparzysta po raz 3")
+print("po ifie")
