@@ -230,3 +230,7 @@
 
 for p in range(20):
     print(f"2 do potęgi {p} = {2**p}")
+    if p != 0:
+        print(f"A 2/{p} = {2/p:.3f}")
+    for pp in range(p):
+        print(f"\t{pp}")
