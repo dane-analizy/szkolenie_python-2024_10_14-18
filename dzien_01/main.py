@@ -135,13 +135,13 @@
 # jeżeli x % 2 jest równa 0 to liczba jest parzysta
 # if x % 2 equals 0 then even else odd
 
-x = 3
-if x % 2 == 0:
-    print("parzysta")
-    print("parzysta po raz 2")
-    print("parzysta po raz 3")
-else:
-    print("nieparzysta")
-    print("nieparzysta po raz 2")
-    print("nieparzysta po raz 3")
-print("po ifie")
+# x = 3
+# if x % 2 == 0:
+#     print("parzysta")
+#     print("parzysta po raz 2")
+#     print("parzysta po raz 3")
+# else:
+#     print("nieparzysta")
+#     print("nieparzysta po raz 2")
+#     print("nieparzysta po raz 3")
+# print("po ifie")
