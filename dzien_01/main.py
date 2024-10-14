@@ -79,3 +79,16 @@
 # print(f"Masz {2024 - rok_urodzenia_liczba} lat")
 
 # print(f"Masz {2024 - int(rok_urodzenia)} lat")
+
+
+### ZADANIE 3
+
+# Napisz program, który pobierze od użytkownika masę (w kg) i wzrost (w cm),
+# a następnie policzy BMI i wypisze wynik na konsolę.
+
+# BMI = masa / wzrost^2
+# masa w kg
+# wzrost w m
+
+# potęgowanie w Pythonie - a do potęgi b -> a ** b
+# wzrost ** 2
