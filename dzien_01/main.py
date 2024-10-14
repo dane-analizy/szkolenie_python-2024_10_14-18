@@ -86,9 +86,25 @@
 # Napisz program, który pobierze od użytkownika masę (w kg) i wzrost (w cm),
 # a następnie policzy BMI i wypisze wynik na konsolę.
 
+# definicja BMI: https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a
 # BMI = masa / wzrost^2
 # masa w kg
 # wzrost w m
 
 # potęgowanie w Pythonie - a do potęgi b -> a ** b
 # wzrost ** 2
+
+
+masa = input("Podaj swoją masę w kg: ")
+masa = float(masa)
+
+wzrost = input("Podaj swój wzrost w cm: ")
+wzrost = float(wzrost)
+wzrost = wzrost / 100
+
+bmi = masa / wzrost**2
+
+# bmi = round(bmi, 2)
+
+print(f"Twoje BMI wynosi: {bmi:.2f}")
+print(f"A zmienna {bmi=}")
