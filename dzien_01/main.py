@@ -147,9 +147,23 @@
 # print("po ifie")
 
 
-
 #### ZADANIE 4
 
 # Niech użytkownik poda jakąś liczbę. W odpowiedzi wyświetlamy tę liczbę i informację czy liczba
 # jest dodatnia, ujemna czy też jest zerem.
 
+liczba = float(input("Podaj dowolną liczbę: "))
+
+# if liczba > 0:
+#     print("Twoja liczba jest dodatnia")
+# if liczba < 0:
+#     print("Twoja liczba jest ujemna")
+# if liczba == 0:
+#     print("Twoja liczba jest równa 0")
+
+# if liczba > 0:
+#     print("Twoja liczba jest dodatnia")
+# elif liczba < 0:
+#     print("Twoja liczba jest ujemna")
+# else:
+#     print("Twoja liczba jest równa 0")
