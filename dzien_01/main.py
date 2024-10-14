@@ -226,4 +226,4 @@
 
 #### ZADANIE 6
 
-# Wyświetl 20 kolejnych potęg liczby 2, czyli 2 do potęgi p.
+# Wyświetl 20 kolejnych potęg liczby 2, czyli 2 do potęgi p, gdzie p jest od 0 do 19.
