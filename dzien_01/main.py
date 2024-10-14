@@ -228,9 +228,16 @@
 
 # Wyświetl 20 kolejnych potęg liczby 2, czyli 2 do potęgi p, gdzie p jest od 0 do 19.
 
-for p in range(20):
-    print(f"2 do potęgi {p} = {2**p}")
-    if p != 0:
-        print(f"A 2/{p} = {2/p:.3f}")
-    for pp in range(p):
-        print(f"\t{pp}")
+# for p in range(20):
+#     print(f"2 do potęgi {p} = {2**p}")
+#     if p != 0:
+#         print(f"A 2/{p} = {2/p:.3f}")
+#     for pp in range(p):
+#         print(f"\t{pp}")
+
+
+
+#### ZADANIE 7
+
+# Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
+
