@@ -31,9 +31,9 @@
 # print(zmienna)
 # print(type(zmienna))
 
-zmienna_int = 1
-zmienna_float = 2.3
-zmienna_str = "abc"
+# zmienna_int = 1
+# zmienna_float = 2.3
+# zmienna_str = "abc"
 
 # print(zmienna_int + zmienna_float) # to się uda
 # print(zmienna_int + zmienna_str) # to się nei uda
@@ -41,3 +41,20 @@ zmienna_str = "abc"
 # print(zmienna_int * 5)
 # print(zmienna_float * 5)
 # print(zmienna_str * 5) # ciekawostka - można mnożyć stringi
+
+
+## wypisanie różnych zmiennych i tekstów razem
+
+# miasto = "Warszawa"
+# temperatura = 10
+# print(miasto, "jest teraz", temperatura, "stopni")
+
+
+# tresc_od_uzytkownika = input("Podaj mi jakiś tekst: ")
+# print(tresc_od_uzytkownika)
+
+
+### ZADANIE 1
+
+# Napisz program, który pobierze od użytkownika imię i nazwisko,
+# a potem wypisze w konsoli pozdrowienie "Witaj IMIĘ NAZWISKO!"
