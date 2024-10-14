@@ -152,7 +152,7 @@
 # Niech użytkownik poda jakąś liczbę. W odpowiedzi wyświetlamy tę liczbę i informację czy liczba
 # jest dodatnia, ujemna czy też jest zerem.
 
-liczba = float(input("Podaj dowolną liczbę: "))
+# liczba = float(input("Podaj dowolną liczbę: "))
 
 # if liczba > 0:
 #     print("Twoja liczba jest dodatnia")
@@ -167,3 +167,19 @@ liczba = float(input("Podaj dowolną liczbę: "))
 #     print("Twoja liczba jest ujemna")
 # else:
 #     print("Twoja liczba jest równa 0")
+
+
+### ZADANIE 5
+
+
+
+#  Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI
+# i wypisze na konsolę. Dodatkowo - na podstawie wartości obliczonego BMI niech poda komentarz.
+#  < 16 => wygłodzenie
+#  16 - 16.999 => wychudzenie
+#  17 - 18,49 => niedowaga
+#  18,5 - 24,999 => pożądana masa ciała
+#  25 - 29,999 => nadwaga
+#  30 - 34,999 => otyłość I stopnia
+#  35 - 39,999 => otyłość II stopnia (duża)
+#  >= 40 otyłość III stopnia (chorobliwa)
