@@ -74,5 +74,8 @@
 
 # Pobierz od użytkownika jego rok urodzenia i w odpowiedzi wypisz ile ma lat.
 
-rok_urodzenia = input()
-print("masz", 2024 - rok_urodzenia, "lat")
+rok_urodzenia = input("Podaj rok w którym się urodziłeś/łaś: ")
+rok_urodzenia_liczba = int(rok_urodzenia)  # rzutowanie typów, inne typy: str(), float()
+print(f"Masz {2024 - rok_urodzenia_liczba} lat")
+
+print(f"Masz {2024 - int(rok_urodzenia)} lat")
