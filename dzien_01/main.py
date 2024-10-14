@@ -236,7 +236,6 @@
 #         print(f"\t{pp}")
 
 
-
 #### ZADANIE 7
 
 # Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
@@ -263,7 +262,7 @@
 # - oprocentowanie w skali roku np. 6
 # - ilość miesięcy na jaką zakładamy lokatę, np. 24
 # Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc oraz ile mamy aktualnie zgromadzonego kapitału
-# po doliczeniu odsetek. 
+# po doliczeniu odsetek.
 # Zakładamy kapitalizację odsetek co miesiąc.
 
 
@@ -274,7 +273,7 @@
 
 # for miesiac in range(liczba_miesiecy):
 #     kwota = kwota + kwota * oprocentowanie
-#     print(f"Po miesiącu {miesiac+1} kapitał to {kwota:.2f}")    
+#     print(f"Po miesiącu {miesiac+1} kapitał to {kwota:.2f}")
 
 
 ### PĘTLA while
@@ -284,7 +283,7 @@
 # przykład na nieskończoną pętlę:
 # i = 0
 # while True:
-#     i += 1    
+#     i += 1
 #     print(i)
 
 # i = 0
@@ -300,10 +299,10 @@
 # aż wartość potęgi (wynik potęgowania) nie przekroczy wartości podanej przez użytkownika
 
 
-limit = 1000
-p = 0
-wynik = 2**p
-while wynik < limit:
-    print(f"2 do potęgi {p} = {wynik}")
-    p += 1
-    wynik = 2**p
+# limit = 1000
+# p = 0
+# wynik = 2**p
+# while wynik < limit:
+#     print(f"2 do potęgi {p} = {wynik}")
+#     p += 1
+#     wynik = 2**p
