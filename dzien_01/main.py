@@ -296,10 +296,14 @@
 
 #### ZADANIE 9
 
-# Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
-# nie przekroczy wartości podanej przez użytkownika
+# Napisz pętlę while która będzie wyświetlała kolejne (począwszy od zerowej) potęgi liczby 2
+# aż wartość potęgi (wynik potęgowania) nie przekroczy wartości podanej przez użytkownika
 
 
 limit = 1000
-while wynik_potęgowania < limit:
-    ...
+p = 0
+wynik = 2**p
+while wynik < limit:
+    print(f"2 do potęgi {p} = {wynik}")
+    p += 1
+    wynik = 2**p
