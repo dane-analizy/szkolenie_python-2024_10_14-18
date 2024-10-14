@@ -68,3 +68,11 @@
 
 # # formatowanie przez .format()
 # print("Witaj {} {}!".format(imie, nazwisko))
+
+
+### ZADANIE 2
+
+# Pobierz od użytkownika jego rok urodzenia i w odpowiedzi wypisz ile ma lat.
+
+rok_urodzenia = input()
+print("masz", 2024 - rok_urodzenia, "lat")
