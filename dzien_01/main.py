@@ -145,3 +145,11 @@
 #     print("nieparzysta po raz 2")
 #     print("nieparzysta po raz 3")
 # print("po ifie")
+
+
+
+#### ZADANIE 4
+
+# Niech użytkownik poda jakąś liczbę. W odpowiedzi wyświetlamy tę liczbę i informację czy liczba
+# jest dodatnia, ujemna czy też jest zerem.
+
