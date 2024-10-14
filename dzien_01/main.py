@@ -266,3 +266,40 @@
 # po doliczeniu odsetek. 
 # Zakładamy kapitalizację odsetek co miesiąc.
 
+
+# kwota = float(input("Podaj wkład początkowy: "))
+# oprocentowanie = float(input("Podaj oprocentowanie w skali roku: "))
+# oprocentowanie = (oprocentowanie / 100 ) / 12
+# liczba_miesiecy = int(input("Liczba miesięcy: "))
+
+# for miesiac in range(liczba_miesiecy):
+#     kwota = kwota + kwota * oprocentowanie
+#     print(f"Po miesiącu {miesiac+1} kapitał to {kwota:.2f}")    
+
+
+### PĘTLA while
+
+# pętla kręci się tak długo dopóki warunek jest spełniony
+
+# przykład na nieskończoną pętlę:
+# i = 0
+# while True:
+#     i += 1    
+#     print(i)
+
+# i = 0
+# while i < 100:
+#     print(f"{i=}")
+#     i = i + 1
+# print("Skończyłem pętlę")
+
+
+#### ZADANIE 9
+
+# Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
+# nie przekroczy wartości podanej przez użytkownika
+
+
+limit = 1000
+while wynik_potęgowania < limit:
+    ...
