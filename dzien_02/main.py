@@ -178,3 +178,17 @@
 # tresc_pliku = open("plik.txt", "r", encoding="utf-8").read()
 # print(tresc_pliku)
 # print(len(tresc_pliku))
+
+
+##### ZADANIE 14
+
+# Napisz program, który zliczy ilość wystąpień małej lub dużej wersji ciągu podanego przez użytkownika
+# w pliku, którego nazwa także podana jest przez użytkownika.
+
+
+plik = input()
+ciag = input()
+
+zawartosc_pliku = open().read()
+ile_razy = zawartosc_pliku.....(ciag)
+print(f"'{ciag}' w pliku {plik} występuje {ile_razy}")
