@@ -170,7 +170,6 @@
 #         print(linia.strip("\n"))
 
 
-
 # ile razy ciąg występuje w innym ciągu
 # napis = "Ala ma kotA, Ale kot nie ma Ali"
 # print(napis.count("a"))
@@ -186,9 +185,60 @@
 # w pliku, którego nazwa także podana jest przez użytkownika.
 
 
-plik = input()
-ciag = input()
+# plik = input("Podaj nazwę pliku: ")
+# ciag = input("Czego szukamy? ")
 
-zawartosc_pliku = open().read()
-ile_razy = zawartosc_pliku.....(ciag)
-print(f"'{ciag}' w pliku {plik} występuje {ile_razy}")
+# zawartosc_pliku = open(plik, "r", encoding="utf-8").read()
+# ile_razy = zawartosc_pliku.lower().count(ciag.lower())
+# print(f"'{ciag}' w pliku {plik} występuje {ile_razy}")
+
+
+#### ZADANIE 15
+
+# Napisz wyszukiwarkę plikową.
+# Wyszukiwarka powinna odebrać od użytkownika poszukiwaną frazę oraz nazwę pliku.
+# W wyniku działania wyszukiwarka powinna pokazać w której linii wystąpiła wyszukiwana fraza oraz całą linię.
+# Wyszukiwarka powinna być nieczuła na wielkość liter.
+
+# wersja 1
+# plik = input("Podaj nazwę pliku: ")
+# ciag = input("Czego szukamy? ")
+
+# numer_linii = 0
+# for linia in open(plik, "r", encoding="utf-8"):
+#     numer_linii = numer_linii + 1
+#     if linia.lower().strip().count(ciag.lower()):
+#         print(f"{numer_linii:<6}: {linia.strip()}")
+
+
+# enumerate - numerowanie w której iteracji pętli jesteśmy
+
+# napis = "ala ma kota"
+# # numer_znaku = 0
+# for numer_iteracji, znak in enumerate(napis, start=1):
+#     # numer_znaku += 1
+#     # print(numer_znaku, i, znak)
+#     print(numer_iteracji, znak)
+
+
+# wersja 2
+
+# plik = input("Podaj nazwę pliku: ")
+# ciag = input("Czego szukamy? ")
+
+# for numer_linii, linia in enumerate(open(plik, "r", encoding="utf-8")):
+#     if linia.lower().strip().count(ciag.lower()):
+#         print(f"{numer_linii:>6}: {linia.strip()}")
+
+
+# jak sięgnąć do konkretnej litery w stringu?
+# napis = "Ala ma kota"
+# print(napis[4])  # -> sięgamy do elementu o indeksie 4 co oznacza 5 znak, bo indeksowanie jest od 0
+
+
+#### ZADANIE 16
+
+# Napisz program który będzie pobierał nazwę pliku z kodem w Pythonie.
+# Program będzie wyświetlał wszystkie linie które **nie** są komentarzami i nie są puste,
+# razem z numerem linii.
+
