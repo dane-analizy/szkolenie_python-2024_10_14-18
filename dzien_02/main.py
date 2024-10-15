@@ -366,13 +366,32 @@
 #     print("2 i 3 są na liście")
 
 
-import random
+# import random
 
-print(random.randint(1, 100))
-
+# print(random.randint(1, 100))
 
 
 #### ZADANIE 18
 
 # Stwórz dwie listy. Każda z list ma zawierać 10 liczb losowych z zakresu 1-100.
 # Połącz te dwie listy do jednej i wyświetl na konsoli.
+
+# import random
+
+# l1 = []
+# for p in range(10):
+#     l1.append(random.randint(1, 100))
+
+# l2 = []
+# for p in range(10):
+#     l2.append(random.randint(1, 100))
+
+# l3 = l1 + l2
+# print(l3)
+
+
+#### ZADANIE 19
+
+# Korzystając z pętli stwórz listę zawierającą elementy same będące listami.
+# Każdy taki element ma zawierać numer potęgi (od 1 do 10) oraz wartość tej potęgi dla liczby 2.
+
