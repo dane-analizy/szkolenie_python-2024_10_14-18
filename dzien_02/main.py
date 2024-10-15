@@ -73,11 +73,19 @@
 # znaki przed lub po słowie) - kończymy program, dziękując za współpracę.
 
 
-while True:
-    slowo = input("Podaj tekst: ")
-    print(f"Wpisałeś: '{slowo.upper()}'")
-    if slowo.strip().lower() == "stop":
-        break
+# while True:
+#     slowo = input("Podaj tekst: ")
+#     print(f"Wpisałeś: '{slowo.upper()}'")
+#     if slowo.strip().lower() == "stop":
+#         break
 
-print("Dziękuję za współpracę")
+# print("Dziękuję za współpracę")
 
+
+# zamiana znaków w stringu
+
+# napis = "Ala ma kotA"
+# print(napis)
+# napis_zmieniony = napis.replace("a", "*")
+# napis_zmieniony = napis_zmieniony.replace("A", "*")
+# print(napis_zmieniony)
