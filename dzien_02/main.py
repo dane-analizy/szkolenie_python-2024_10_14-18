@@ -331,4 +331,48 @@
 # print("l1:", l1)
 # print("l2:", l2)
 
+# l1 = [1, 1, 2, 3]
+# l2 = [9, 8, 7, 1]
+# l3 = l1 + l2
+# print(l3)
 
+# l3 = l1 - l2
+# print(l3)
+
+# lista = [1, 2, 3, 4, 5, 6, 7]
+# zmienna = 50
+# if zmienna in lista:
+#     print(f"{zmienna} jest na liście")
+# else:
+#     print(f"{zmienna} nie ma na liście")
+
+
+# lista = "ala ma kota"
+# zmienna = "al"
+# if zmienna in lista:
+#     print(f"{zmienna} jest na liście")
+# else:
+#     print(f"{zmienna} nie ma na liście")
+
+# lista = [1, 2, 3, [2, 3], 4, 5, 6, 7]
+# zmienna = [2, 3]
+# if zmienna in lista:
+#     print(f"{zmienna} jest na liście")
+# else:
+#     print(f"{zmienna} nie ma na liście")
+
+
+# if (2 in lista) and (3 in lista):
+#     print("2 i 3 są na liście")
+
+
+import random
+
+print(random.randint(1, 100))
+
+
+
+#### ZADANIE 18
+
+# Stwórz dwie listy. Każda z list ma zawierać 10 liczb losowych z zakresu 1-100.
+# Połącz te dwie listy do jednej i wyświetl na konsoli.
