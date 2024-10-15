@@ -104,3 +104,47 @@
 
 # Napisz program, który przyjmie od użytkownika ciąg tekstowy, następnie usunie z niego znaki: ,.?!
 # a następnie powiększony do dużych liter wyświetli w konsoli.
+
+# wersja 1
+
+# tekst = input("Podaj jakiś tekst: ")
+# tekst = tekst.replace(",", "")
+# tekst = tekst.replace(".", "")
+# tekst = tekst.replace("?", "")
+# tekst = tekst.replace("!", "")
+# tekst = tekst.replace("@", "")
+# tekst = tekst.replace("#", "")
+# tekst = tekst.upper()
+# print(tekst)
+
+
+# wersja 2
+
+# tekst = input("Podaj jakiś tekst: ")
+# tekst = (
+#     tekst
+#     .replace(",", "")
+#     .replace(".", "")
+#     .replace("?", "")
+#     .replace("!", "")
+#     .upper()
+#     )
+# print(tekst)
+
+
+# string to lista liter
+# napis = "Ala ma kota"
+# for znak in napis:
+#     print(znak)
+
+
+# wersja 3 - najbardziej optymalna
+tekst = input("Podaj jakiś tekst: ")
+zakazane_znaki = ".,?!" # <- tutaj dodaj kolejne zakazane znaki
+
+for zakazany_jeden_znak in zakazane_znaki:
+    tekst = tekst.replace(zakazany_jeden_znak, "")
+    
+tekst = tekst.upper()
+print(tekst)
+
