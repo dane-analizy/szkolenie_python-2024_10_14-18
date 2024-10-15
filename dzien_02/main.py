@@ -150,20 +150,21 @@
 # print(tekst)
 
 
-
 ### czytane z pliku
 
 # f = open("plik.txt", "r", encoding="utf-8")
 # for linia in f:
 #     print(linia.strip('\n'))
-    
-    
+
+
 ### ZADANIE 13
 
 # Napisz program który wyświetli na konsoli niepuste linie z pliku tekstowego,
 # którego nazwę poda użytkownik.
 
-input
-open
-for ... in  open
-print strip
+nazwa_pliku = input("Podaj nazwę pliku: ")
+for linia in open(nazwa_pliku, "r", encoding="utf-8"):
+    # if len(linia) > 1:
+    # if linia.strip():
+    if len(linia.strip()):
+        print(linia.strip("\n"))
