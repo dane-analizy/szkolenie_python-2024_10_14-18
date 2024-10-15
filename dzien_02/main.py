@@ -248,3 +248,62 @@
 #     if linia.strip() and linia[0] != "#":
 #         linia_kodu = linia.strip("\n")
 #         print(f"{nr:>5}: {linia_kodu}")
+
+
+### Listy
+
+# lista = [1, "a", 2.3, "abc", [1, 2], ["abc", "cde"]]
+# print(lista)
+# for element in lista:
+#     print(element, type(element))
+
+
+# dodawanie elementów do listy
+# lista = list()  # synonim: lista = []
+# print(lista)
+# lista.append(1)
+# print(lista)
+# lista.append(1)
+# print(lista)
+# lista.insert(0, "abc")
+# print(lista)
+
+# lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print(lista[0])
+# print(lista[5])
+# print(lista[1:4])
+# print(lista[:3])
+# print(lista[5:])
+# print(lista[:])
+
+# print(lista[1:100])
+# # print(lista[100])
+# print(lista[25:100])
+
+# if lista[25:100]:
+#     print("nie pusta")
+# else:
+#     print("pusta")
+
+# print(len(lista))
+
+# if len(lista) > 0:
+#     print("nie pusta")
+# else:
+#     print("pusta")
+
+
+# print(lista[2:7:3])
+# print(lista[::2])
+
+# print(lista[4:-2])
+
+# print(lista[-1:0:-1])
+
+# print(lista[::-1])
+
+
+#### ZADANIE 17
+
+# Napisz kod który umieści w liście 10 kolejnych potęg liczby 2 (od 0 potęgi).
+# Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
