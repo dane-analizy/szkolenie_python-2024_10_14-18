@@ -451,9 +451,37 @@
 # print(linia_lista)
 # print(type(linia_lista[2]))
 
+
 ### ZADANIE 21
 
 # Dla każdego wpisu w pliku zawodnicy.csv wyświetl na konsoli informację o:
 # imieniu, nazwisku, wadze i wzroście oraz BMI (wcześniej je policz).
 
 # BMI = waga (w kg) / wzrost (w metrach) ** 2
+
+nazwa_pliku = "zawodnicy.csv"
+zawartosc_pliku = open(nazwa_pliku, "r", encoding="utf-8").readlines()
+for linia in zawartosc_pliku:
+    rekord = linia.strip().split(";")
+    bmi = float(rekord[3]) / (float(rekord[2]) / 100) ** 2
+
+    if bmi <= 16:
+        bmi_comment = "wygłodzenie"
+    elif bmi <= 17:
+        bmi_comment = "wychudzenie"
+    elif bmi <= 18.5:
+        bmi_comment = "niedowaga"
+    elif bmi <= 25:
+        bmi_comment = "pożądana masa ciała"
+    elif bmi <= 30:
+        bmi_comment = "nadwaga"
+    elif bmi <= 35:
+        bmi_comment = "otyłość I stopnia"
+    elif bmi <= 40:
+        bmi_comment = "otyłość II stopnia (duża)"
+    else:
+        bmi_comment = "otyłość III stopnia (chorobliwa)"
+
+    print(
+        f"{rekord[0]} {rekord[1]} ma {rekord[2]} cm wzrostu i {rekord[3]} kg wagi, co daje BMI = {bmi:.2f} ({bmi_comment})"
+    )
