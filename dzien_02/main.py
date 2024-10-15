@@ -80,3 +80,4 @@ while True:
         break
 
 print("Dziękuję za współpracę")
+
