@@ -60,7 +60,7 @@
 # print("upper", napis.upper())
 # print("lower", napis.lower())
 # print("title", napis.title())
-# print("strip", napis.strip())
+# print("strip", napis.strip()) # lstrip rstrip
 # print("len", len(napis))
 # print("len po strip", len(napis.strip()))
 
@@ -321,7 +321,8 @@
 #     print(el)
 
 # l1 = [1, 2, 3]
-# l2 = l1.copy()
+# l2 = l1 # sprawdź tak 
+# l2 = l1.copy() # i tak
 # print("l1:", l1)
 # print("l2:", l2)
 
@@ -459,29 +460,40 @@
 
 # BMI = waga (w kg) / wzrost (w metrach) ** 2
 
-nazwa_pliku = "zawodnicy.csv"
-zawartosc_pliku = open(nazwa_pliku, "r", encoding="utf-8").readlines()
-for linia in zawartosc_pliku:
-    rekord = linia.strip().split(";")
-    bmi = float(rekord[3]) / (float(rekord[2]) / 100) ** 2
+# nazwa_pliku = "zawodnicy.csv"
+# zawartosc_pliku = open(nazwa_pliku, "r", encoding="utf-8").readlines()
+# for linia in zawartosc_pliku:
+#     rekord = linia.strip().split(";")
+#     bmi = float(rekord[3]) / (float(rekord[2]) / 100) ** 2
 
-    if bmi <= 16:
-        bmi_comment = "wygłodzenie"
-    elif bmi <= 17:
-        bmi_comment = "wychudzenie"
-    elif bmi <= 18.5:
-        bmi_comment = "niedowaga"
-    elif bmi <= 25:
-        bmi_comment = "pożądana masa ciała"
-    elif bmi <= 30:
-        bmi_comment = "nadwaga"
-    elif bmi <= 35:
-        bmi_comment = "otyłość I stopnia"
-    elif bmi <= 40:
-        bmi_comment = "otyłość II stopnia (duża)"
-    else:
-        bmi_comment = "otyłość III stopnia (chorobliwa)"
+#     if bmi <= 16:
+#         bmi_comment = "wygłodzenie"
+#     elif bmi <= 17:
+#         bmi_comment = "wychudzenie"
+#     elif bmi <= 18.5:
+#         bmi_comment = "niedowaga"
+#     elif bmi <= 25:
+#         bmi_comment = "pożądana masa ciała"
+#     elif bmi <= 30:
+#         bmi_comment = "nadwaga"
+#     elif bmi <= 35:
+#         bmi_comment = "otyłość I stopnia"
+#     elif bmi <= 40:
+#         bmi_comment = "otyłość II stopnia (duża)"
+#     else:
+#         bmi_comment = "otyłość III stopnia (chorobliwa)"
 
-    print(
-        f"{rekord[0]} {rekord[1]} ma {rekord[2]} cm wzrostu i {rekord[3]} kg wagi, co daje BMI = {bmi:.2f} ({bmi_comment})"
-    )
+#     print(
+#         f"{rekord[0]} {rekord[1]} ma {rekord[2]} cm wzrostu i {rekord[3]} kg wagi, co daje BMI = {bmi:.2f} ({bmi_comment})"
+#     )
+
+
+### sortowanie list
+
+# l = [4, 6, 2, 7, 9, 2, 9, 1]
+# print(sorted(l, reverse=True))
+# l.sort()
+# print(l)
+
+l = [ [4, 1] , [6, 2], [7, 9], [2, 9] ]
+print(sorted(l, key=))
