@@ -242,3 +242,9 @@
 # Program będzie wyświetlał wszystkie linie które **nie** są komentarzami i nie są puste,
 # razem z numerem linii.
 
+# plik = input("Podaj nazwę pliku: ")
+
+# for nr, linia in enumerate(open(plik, "r", encoding="utf-8"), start=1):
+#     if linia.strip() and linia[0] != "#":
+#         linia_kodu = linia.strip("\n")
+#         print(f"{nr:>5}: {linia_kodu}")
