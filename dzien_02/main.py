@@ -75,8 +75,8 @@
 
 while True:
     slowo = input("Podaj tekst: ")
-    print(slowo) #...
-    if slowo == "stop": #..
+    print(f"Wpisałeś: '{slowo.upper()}'")
+    if slowo.strip().lower() == "stop":
         break
 
 print("Dziękuję za współpracę")
