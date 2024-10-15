@@ -139,12 +139,13 @@
 
 
 # wersja 3 - najbardziej optymalna
-tekst = input("Podaj jakiś tekst: ")
-zakazane_znaki = ".,?!" # <- tutaj dodaj kolejne zakazane znaki
 
-for zakazany_jeden_znak in zakazane_znaki:
-    tekst = tekst.replace(zakazany_jeden_znak, "")
-    
-tekst = tekst.upper()
-print(tekst)
+# tekst = input("Podaj jakiś tekst: ")
+# zakazane_znaki = ".,?!" # <- tutaj dodaj kolejne zakazane znaki
+
+# for zakazany_jeden_znak in zakazane_znaki:
+#     tekst = tekst.replace(zakazany_jeden_znak, "")
+
+# tekst = tekst.upper()
+# print(tekst)
 

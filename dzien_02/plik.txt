@@ -1,0 +1,6 @@
+pierwsza linia
+    druga
+trzecia ze spacjami na końcu     
+
+piąta, bo czwarta była pusta
+szósta
