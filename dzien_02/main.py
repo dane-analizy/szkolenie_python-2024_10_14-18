@@ -35,7 +35,11 @@
 # Ale jeśli użytkownika wpisze słowo "stop" - kończymy program, dziękując za współpracę.
 
 
-
+while True:
+    input
+    if slowo == "stop":
+    print
+    
 
 
 # jak sprawdzić czy pętla przeszła wszystkie iteracje?
