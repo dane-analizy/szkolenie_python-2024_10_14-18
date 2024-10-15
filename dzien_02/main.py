@@ -395,3 +395,25 @@
 # Korzystając z pętli stwórz listę zawierającą elementy same będące listami.
 # Każdy taki element ma zawierać numer potęgi (od 1 do 10) oraz wartość tej potęgi dla liczby 2.
 
+# lista = []
+# for p in range(1, 11):
+#     lista.append([p, 2**p])
+
+# print(lista)
+
+
+# lista składana = list comprehention
+
+lista = []
+for i in range(10):
+    lista.append(i)
+    
+    
+    
+lista = [i for i in range(10) ]
+
+for i in range(10):
+    lista.append(i)
+    
+    
+l = [  [p, 2**p]   for p in range(10)  ]
