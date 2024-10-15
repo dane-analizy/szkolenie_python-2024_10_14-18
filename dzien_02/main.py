@@ -89,3 +89,18 @@
 # napis_zmieniony = napis.replace("a", "*")
 # napis_zmieniony = napis_zmieniony.replace("A", "*")
 # print(napis_zmieniony)
+
+# usunięcie znaków
+# napis = "Ala ma kotA, Ale kot nie ma Ali"
+# print(napis)
+# napis_zmieniony = napis.replace("a", "")
+# print(napis_zmieniony)
+
+# napis_zmieniony_2 = napis.replace("Al", "BAL")
+# print(napis_zmieniony_2)
+
+
+### ZADANIE 12
+
+# Napisz program, który przyjmie od użytkownika ciąg tekstowy, następnie usunie z niego znaki: ,.?!
+# a następnie powiększony do dużych liter wyświetli w konsoli.
