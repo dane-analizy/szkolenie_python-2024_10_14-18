@@ -162,9 +162,19 @@
 # Napisz program który wyświetli na konsoli niepuste linie z pliku tekstowego,
 # którego nazwę poda użytkownik.
 
-nazwa_pliku = input("Podaj nazwę pliku: ")
-for linia in open(nazwa_pliku, "r", encoding="utf-8"):
-    # if len(linia) > 1:
-    # if linia.strip():
-    if len(linia.strip()):
-        print(linia.strip("\n"))
+# nazwa_pliku = input("Podaj nazwę pliku: ")
+# for linia in open(nazwa_pliku, "r", encoding="utf-8"):
+#     # if len(linia) > 1:
+#     # if linia.strip():
+#     if len(linia.strip()):
+#         print(linia.strip("\n"))
+
+
+
+# ile razy ciąg występuje w innym ciągu
+# napis = "Ala ma kotA, Ale kot nie ma Ali"
+# print(napis.count("a"))
+
+# tresc_pliku = open("plik.txt", "r", encoding="utf-8").read()
+# print(tresc_pliku)
+# print(len(tresc_pliku))
