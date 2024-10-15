@@ -149,3 +149,21 @@
 # tekst = tekst.upper()
 # print(tekst)
 
+
+
+### czytane z pliku
+
+# f = open("plik.txt", "r", encoding="utf-8")
+# for linia in f:
+#     print(linia.strip('\n'))
+    
+    
+### ZADANIE 13
+
+# Napisz program który wyświetli na konsoli niepuste linie z pliku tekstowego,
+# którego nazwę poda użytkownik.
+
+input
+open
+for ... in  open
+print strip
