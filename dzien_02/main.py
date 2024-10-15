@@ -307,3 +307,28 @@
 
 # Napisz kod który umieści w liście 10 kolejnych potęg liczby 2 (od 0 potęgi).
 # Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
+
+# lista =  []
+# for p in range(10):
+#     lista.append(2 ** p)
+
+# for el in lista:
+#     print(el)
+
+# # to nie jest pythonic-style:
+# for idx in range(len(lista)):
+#     el = lista[idx]
+#     print(el)
+
+# l1 = [1, 2, 3]
+# l2 = l1.copy()
+# print("l1:", l1)
+# print("l2:", l2)
+
+# l1[2] = "abc"
+# l2[0] = "xyz"
+
+# print("l1:", l1)
+# print("l2:", l2)
+
+
