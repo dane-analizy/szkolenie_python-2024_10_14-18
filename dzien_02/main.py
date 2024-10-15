@@ -404,16 +404,44 @@
 
 # lista składana = list comprehention
 
-lista = []
-for i in range(10):
-    lista.append(i)
-    
-    
-    
-lista = [i for i in range(10) ]
+# lista = []
+# for i in range(10):
+#     lista.append(i)
 
-for i in range(10):
-    lista.append(i)
-    
-    
-l = [  [p, 2**p]   for p in range(10)  ]
+
+# lista = [i for i in range(10)]
+
+# for i in range(10):
+#     lista.append(i)
+
+
+# l = [[p, 2**p] for p in range(10)]
+
+
+##### ZADANIE 20
+
+# Korzystając z list składanych zbuduj listę losowych 10 liczb z zakresu 100-200. Wyświetl całą listę.
+
+# import random
+
+# lista = [ random.randint(100, 200) for _ in range(10)] 
+# print(lista)
+
+# tabliczka mnożenia
+
+## wersja 1
+# tabliczka = []
+# for x in range(1, 11):
+#     for y in range(1, 11):
+#         tabliczka.append( [x, y, x*y] )
+        
+# print(tabliczka)
+
+## wersja 2
+# tabliczka = [ [x, y, x * y] for x in range(1, 11) for y in range(1, 11) ]
+# print(tabliczka)
+
+
+# rozbicie napisu na listę stringów względem separatora - tutaj jest nim ;
+# napis = "kolumna1;kolumna2;kolumna3"
+# print(napis.split(";"))
