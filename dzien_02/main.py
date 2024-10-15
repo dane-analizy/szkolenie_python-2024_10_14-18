@@ -445,3 +445,13 @@
 # rozbicie napisu na listę stringów względem separatora - tutaj jest nim ;
 # napis = "kolumna1;kolumna2;kolumna3"
 # print(napis.split(";"))
+
+# linia = "Bogdan;Kowalski;170;90"
+# linia_lista = linia.split(";")
+# print(linia_lista)
+# print(type(linia_lista[2]))
+
+### ZADANIE 21
+
+# Dla każdego wpisu w pliku zawodnicy.csv wyświetl na konsoli informację o:
+# imieniu, nazwisku, wadze i wzroście oraz BMI (wcześniej je policz).
