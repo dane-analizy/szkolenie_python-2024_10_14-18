@@ -21,6 +21,21 @@
 
 # Przejdź w pętli po liczbach od 1 do 100 i wydrukuj tylko nieparzyste. Użyj konstrukcji z continue.
 
+# for i in range(100):
+#     if i % 2 == 0:
+#         continue
+#     print(i)
+
+
+
+#### ZADANIE 11
+
+# Napisz kod, który w nieskończoność będzie pytał użytkownika o kolejne słowa.
+# To co wpisze użytkownik - wypisujemy na ekranie.
+# Ale jeśli użytkownika wpisze słowo "stop" - kończymy program, dziękując za współpracę.
+
+
+
 
 
 # jak sprawdzić czy pętla przeszła wszystkie iteracje?
