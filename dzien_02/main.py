@@ -424,7 +424,7 @@
 
 # import random
 
-# lista = [ random.randint(100, 200) for _ in range(10)] 
+# lista = [ random.randint(100, 200) for _ in range(10)]
 # print(lista)
 
 # tabliczka mnożenia
@@ -434,7 +434,7 @@
 # for x in range(1, 11):
 #     for y in range(1, 11):
 #         tabliczka.append( [x, y, x*y] )
-        
+
 # print(tabliczka)
 
 ## wersja 2
@@ -455,3 +455,5 @@
 
 # Dla każdego wpisu w pliku zawodnicy.csv wyświetl na konsoli informację o:
 # imieniu, nazwisku, wadze i wzroście oraz BMI (wcześniej je policz).
+
+# BMI = waga (w kg) / wzrost (w metrach) ** 2
