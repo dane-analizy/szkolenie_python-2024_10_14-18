@@ -226,37 +226,70 @@
 
 # if ciag in dlugi_ciag
 
-import os
+# import os
 
-ciag = input("Podaj fragment nazwy pliku lub katalogu, którego ma poszukać: ")
+# ciag = input("Podaj fragment nazwy pliku lub katalogu, którego ma poszukać: ")
 
 
-znalezione = []
-for element in os.walk("."):
-    sciezka = element[0]
-    lista_katalogow = element[1]
-    lista_plikow = element[2]
+# znalezione = []
+# for element in os.walk("."):
+#     sciezka = element[0]
+#     lista_katalogow = element[1]
+#     lista_plikow = element[2]
 
-    # katalogi
-    for k in lista_katalogow:
-        if ciag in k:
-            # print(f"{sciezka}: {k} (katalog)")
-            znalezione.append((sciezka, k, "katalog"))
+#     # katalogi
+#     for k in lista_katalogow:
+#         if ciag in k:
+#             # print(f"{sciezka}: {k} (katalog)")
+#             znalezione.append((sciezka, k, "katalog"))
 
-    # pliki
-    for p in lista_plikow:
-        if ciag in p:
-            # print(f"{sciezka}: {p} (plik)")
-            znalezione.append((sciezka, p, "plik"))
+#     # pliki
+#     for p in lista_plikow:
+#         if ciag in p:
+#             # print(f"{sciezka}: {p} (plik)")
+#             znalezione.append((sciezka, p, "plik"))
 
-# [
-#     (".", "plikolog2", "katalog"),
-#     (".\\katalog1", "plikolog1", "katalog"),
-#     (".\\katalog1", "plik1", "plik"),
-#     (".\\katalog1\\katalog2", "plik2", "plik"),
-#     (".\\plikolog2", "plik3", "plik"),
-# ]
+# # [
+# #     (".", "plikolog2", "katalog"),
+# #     (".\\katalog1", "plikolog1", "katalog"),
+# #     (".\\katalog1", "plik1", "plik"),
+# #     (".\\katalog1\\katalog2", "plik2", "plik"),
+# #     (".\\plikolog2", "plik3", "plik"),
+# # ]
 
-znalezione.sort(key=lambda e: (e[2], e[0], e[1]))
-for e in znalezione:
-    print(e)
+# znalezione.sort(key=lambda e: (e[2], e[0], e[1]))
+# for e in znalezione:
+#     print(e)
+
+
+### zbiory - set
+
+# krotka = (2, 1, 3, 1, "abc", "efg", "abc")
+# zbior = set(krotka)
+# print(krotka)
+# print(zbior)
+
+# lista = list(zbior)
+# print(lista)
+
+# lista = list(set( lista ))
+
+# for e in zbior:
+#     print(e)
+
+
+# zbiór może się składać tylko z "hashowalnych" elementów - lista taka nie jest, krotka już tak
+# zbior = set( [ 1, 2, 1, 2, (3, 4), (4, 3), (3, 4) ] )
+# print(zbior)
+
+
+# z1 = { 1, 2, 3, 4}
+# z2 = { 4, 5, 6}
+# z1.add(5)
+# print(z1)
+# z2.add(5)
+# print(z2)
+# print(z1.intersection(z2))
+# print(z1.union(z2))
+# print(z1.difference(z2))
+# print(z2.difference(z1))
