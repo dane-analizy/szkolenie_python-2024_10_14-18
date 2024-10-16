@@ -181,5 +181,37 @@
 # Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę wypisz na konsoli.
 
 
-import random
-random.randint(1, 10)
+# import random
+
+# ls1 = [random.randint( 1, 10) for _ in range(10)]
+# kr1 = tuple(ls1)
+
+# kr2 = tuple([random.randint(11, 20) for _ in range(10)])
+
+# kr3 = kr1 + kr2
+# print(kr3)
+
+
+# lista plików
+
+import os
+
+for element in os.walk("."):
+    sciezka = element[0]
+    lista_katalogow = element[1]
+    lista_plikow = element[2]
+
+    # gdzie jestem?
+    print(f"Jestem na poziomie {sciezka}")
+
+    # katalogi
+    print("Lista katalogów:")
+    for k in lista_katalogow:
+        print(f"\t- {k}")
+
+    # pliki
+    print("Lista plików:")
+    for p in lista_plikow:
+        print(f"\t- {p}")
+
+    print("="*40)
