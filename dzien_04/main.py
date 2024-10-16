@@ -6,3 +6,4 @@
 
 # api - czytanie z usług sieciowych
 
+# pytania na juniora
