@@ -422,3 +422,11 @@
 #     dane_wynikowe.append(dict(zip(nazwy_kolumn, rekord)))
     
 # print(dane_wynikowe)
+
+
+# pakiet zewnętrze -> https://pypi.org/
+# pip install nazwa-pakietu
+
+# Faker - sztuczne dane -> https://pypi.org/project/Faker/
+# pip install Faker
+
