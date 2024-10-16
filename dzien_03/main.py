@@ -51,7 +51,7 @@
 # print(posortowane_dane)
 
 
-# .join()
+# .join(   )
 
 # napis = "ala ma\nkota\ta kot ma ale"
 # print(napis.split())
@@ -378,6 +378,8 @@
 #     print(el1, el2)
 
 
+# from itertools import zip_longest
+
 # kluczem w słowniku może być np. tuple:
 # d = {
 #     (2024, 10, 15, 13, 30, 25, "ID123", "typwartosci"): 99,
@@ -508,8 +510,99 @@
 # print("Po sortowaniu:", d_posostowane)
 
 
-
-### ZADANIE 28 
+### ZADANIE 28
 
 # Korzystając z tekstu Pana Tadeusza w pliku pan-tadeusz.txt policz ile razy występuje każde ze słów.
+
+
+# rozwiązanie 1
+# import time
+
+# text = open("pan-tadeusz.txt","r", encoding="utf-8").read()
+# text = text.lower()
+
+# zle_znaki = ".,!?;:()-—/\\\n\t…«»"
+# for znak in zle_znaki:
+#     text = text.replace(znak, " ")
+
+# slowa = text.split()
+
+# start_time = time.perf_counter()
+# licznik = {}
+# for slowo in slowa:
+#     if not slowo:
+#         continue
+#     if len(slowo) <= 4:
+#         continue
+#     licznik[slowo] = licznik.get(slowo, 0) + 1
+# stop_time = time.perf_counter()
+
+# licznik = dict(sorted(licznik.items(), key=lambda kv: kv[1]))
+# print(licznik)
+
+
+# print(licznik['tadeusz'])
+# print(licznik["tadeuszu"])
+
+# print(stop_time - start_time)
+
+
+# rozwiązanie 2
+# import time
+
+# text = open("pan-tadeusz.txt", "r", encoding="utf-8").read()
+# text = text.lower()
+
+# zle_znaki = ".,!?;:()-—/\\\n\t…«»"
+# for znak in zle_znaki:
+#     text = text.replace(znak, " ")
+
+# slowa = text.split()
+# unikalne_slowa = set(slowa)
+
+# start_time = time.perf_counter()
+# licznik = {}
+# for slowo in unikalne_slowa:
+#     if not slowo:
+#         continue
+#     if len(slowo) <= 4:
+#         continue
+#     licznik[slowo] = text.count(slowo)
+# stop_time = time.perf_counter()
+
+# licznik = dict(sorted(licznik.items(), key=lambda kv: kv[1]))
+# print(licznik)
+
+
+# print(licznik["tadeusz"])
+# print(licznik["tadeuszu"])
+
+# print(stop_time - start_time)
+
+
+# rozwiązanie 3
+# import time
+# from collections import Counter
+
+# text = open("pan-tadeusz.txt", "r", encoding="utf-8").read()
+# text = text.lower()
+
+# zle_znaki = ".,!?;:()-—/\\\n\t…«»"
+# for znak in zle_znaki:
+#     text = text.replace(znak, " ")
+
+# slowa = text.split()
+
+# start_time = time.perf_counter()
+# licznik = Counter(slowa)
+# stop_time = time.perf_counter()
+
+# licznik = dict(sorted(licznik.items(), key=lambda kv: kv[1]))
+# print(licznik)
+
+# print(stop_time - start_time)
+
+
+# lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print(list(filter(lambda x: x % 2 == 0, lista)))
 
