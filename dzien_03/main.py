@@ -34,6 +34,22 @@
 
 # Wczytaj dane z pliku zawodnicy.csv. Posortuj je po wadze i wyświetl na konsoli, od najcięższego zawodnika
 
+nazwa_pliku = "zawodnicy.csv"
+sep = ";"
+enc = "utf-8"
+
+# dane = []
+# for linia in open(nazwa_pliku, "r", encoding=enc).readlines():
+#     dane.append(linia.strip())
+
+dane = [linia.strip() for linia in open(nazwa_pliku, "r", encoding=enc).readlines()]
+dane = [rekord.split(sep) for rekord in dane]
+dane = [[r[0], r[1], float(r[2]), float(r[3])] for r in dane]
+print(dane)
+
+posortowane_dane = sorted(dane, key=lambda r: r[3], reverse=True)
+print(posortowane_dane)
+
 
 # .join()
 
