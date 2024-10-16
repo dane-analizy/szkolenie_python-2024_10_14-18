@@ -230,6 +230,8 @@ import os
 
 ciag = input("Podaj fragment nazwy pliku lub katalogu, którego ma poszukać: ")
 
+
+znalezione = []
 for element in os.walk("."):
     sciezka = element[0]
     lista_katalogow = element[1]
@@ -238,9 +240,23 @@ for element in os.walk("."):
     # katalogi
     for k in lista_katalogow:
         if ciag in k:
-            print(f"{sciezka}: {k} (katalog)")
+            # print(f"{sciezka}: {k} (katalog)")
+            znalezione.append((sciezka, k, "katalog"))
 
     # pliki
     for p in lista_plikow:
         if ciag in p:
-            print(f"{sciezka}: {p} (plik)")
+            # print(f"{sciezka}: {p} (plik)")
+            znalezione.append((sciezka, p, "plik"))
+
+# [
+#     (".", "plikolog2", "katalog"),
+#     (".\\katalog1", "plikolog1", "katalog"),
+#     (".\\katalog1", "plik1", "plik"),
+#     (".\\katalog1\\katalog2", "plik2", "plik"),
+#     (".\\plikolog2", "plik3", "plik"),
+# ]
+
+znalezione.sort(key=lambda e: (e[2], e[0], e[1]))
+for e in znalezione:
+    print(e)
