@@ -406,3 +406,19 @@
 
 # Przepisz dane z pliku zawodnicy.csv do listy słowników.
 # Niech klucze będą taki: imie, nazwisko, wzrost, waga
+
+
+# nazwa_pliku = "zawodnicy.csv"
+# sep = ";"
+# enc = "utf-8"
+
+# dane = [linia.strip() for linia in open(nazwa_pliku, "r", encoding=enc).readlines()]
+# dane = [rekord.split(sep) for rekord in dane]
+# dane = [[r[0], r[1], float(r[2]), float(r[3])] for r in dane]
+
+# nazwy_kolumn = ("imie", "nazwisko", "wzrost", "waga")
+# dane_wynikowe = []
+# for rekord in dane:
+#     dane_wynikowe.append(dict(zip(nazwy_kolumn, rekord)))
+    
+# print(dane_wynikowe)
