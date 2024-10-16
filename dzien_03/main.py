@@ -51,7 +51,54 @@
 # print(posortowane_dane)
 
 
-
 # .join()
 
+# napis = "ala ma\nkota\ta kot ma ale"
+# print(napis.split())
+
+# lista = ["ala", "ma", "kota", "a", "kot", "ma", "ale", 1]
+# print(lista)
+
+# sklejone = ""
+# for i, el in enumerate(lista):
+#     if i == 0:
+#         sklejone = el
+#     else:
+#         sklejone = sklejone + "+" + str(el)
+# print(sklejone)
+
+
+# wynik = " ".join([str(el) for el in lista])
+# print(wynik)
+
+
 # zadanie -> wynik obliczenia BMI do pliku, posortowane
+
+
+#### ZADANIE 23
+
+# Napisz program, który pobierze dane z pliku zawodnicy.csv i wyliczy dla każdego z zawodników
+# jego BMI. Wynik - imie, nazwisko, bmi - zapisz do nowego pliku.
+
+# BMI = waga (w kg) / wzrost**2 (w m)
+
+nazwa_pliku = "zawodnicy.csv"
+sep = ";"
+enc = "utf-8"
+
+dane = [linia.strip() for linia in open(nazwa_pliku, "r", encoding=enc).readlines()]
+dane = [rekord.split(sep) for rekord in dane]
+dane = [[r[0], r[1], float(r[2]), float(r[3])] for r in dane]
+print(dane)
+
+# for ... in dane
+#     bmi = r[..] / r[..]**2
+
+# [
+#     [imie, nazwisko, waga, wzrost, bmi], -> join()
+#     [imie, nazwisko, waga, wzrost, bmi]
+# ]
+
+# f = open(nazwa_pliku, "w", encoding=enc)
+# f.writelines(wyliczone_dane)
+# f.close()
