@@ -91,14 +91,48 @@ dane = [rekord.split(sep) for rekord in dane]
 dane = [[r[0], r[1], float(r[2]), float(r[3])] for r in dane]
 print(dane)
 
-# for ... in dane
-#     bmi = r[..] / r[..]**2
-
+# wynik printa:
 # [
-#     [imie, nazwisko, waga, wzrost, bmi], -> join()
-#     [imie, nazwisko, waga, wzrost, bmi]
+#     ['Jan', 'Nowak', 180.0, 80.0],
+#     ['Zdzisław', 'Kręcina', 160.0, 100.0],
+#     ['Marian', 'Koniuszko', 190.0, 60.0],
+#     ['Bogdan', 'Kowalski', 170.0, 90.0]
 # ]
 
-# f = open(nazwa_pliku, "w", encoding=enc)
-# f.writelines(wyliczone_dane)
-# f.close()
+for rekord in dane:
+    bmi = rekord[3] / (rekord[2] / 100) ** 2
+    rekord.append(bmi)
+
+# teraz dane wyglądają tak:
+# [
+#     ["Jan", "Nowak", 180.0, 80.0, 24.691358024691358],
+#     ["Zdzisław", "Kręcina", 160.0, 100.0, 39.06249999999999],
+#     ["Marian", "Koniuszko", 190.0, 60.0, 16.62049861495845],
+#     ["Bogdan", "Kowalski", 170.0, 90.0, 31.14186851211073],
+# ]
+
+# "Jan;Nowak;24.691358024691358"
+
+# wersja 1 budowania linii wynikowej:
+# dane_do_zapisu = []
+# for r in dane :
+#     linia = f"{r[0]};{r[1]};{str(r[4])}\n"
+#     dane_do_zapisu.append(linia)
+
+# wersja 2 budowania linii wynikowej:
+dane_do_zapisu = [f"{r[0]};{r[1]};{str(r[4])}\n" for r in dane]
+
+
+print(dane_do_zapisu)
+# wynik:
+# [
+#     "Jan;Nowak;24.691358024691358",
+#     "Zdzisław;Kręcina;39.06249999999999",
+#     "Marian;Koniuszko;16.62049861495845",
+#     "Bogdan;Kowalski;31.14186851211073",
+# ]
+
+nazwa_pliku_wyjsciowego = "zawodnicy_bmi.csv"
+f = open(nazwa_pliku_wyjsciowego, "w", encoding=enc)
+f.writelines(dane_do_zapisu)
+f.close()
