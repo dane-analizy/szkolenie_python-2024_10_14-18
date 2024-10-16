@@ -82,57 +82,102 @@
 
 # BMI = waga (w kg) / wzrost**2 (w m)
 
-nazwa_pliku = "zawodnicy.csv"
-sep = ";"
-enc = "utf-8"
+# nazwa_pliku = "zawodnicy.csv"
+# sep = ";"
+# enc = "utf-8"
 
-dane = [linia.strip() for linia in open(nazwa_pliku, "r", encoding=enc).readlines()]
-dane = [rekord.split(sep) for rekord in dane]
-dane = [[r[0], r[1], float(r[2]), float(r[3])] for r in dane]
-print(dane)
+# dane = [linia.strip() for linia in open(nazwa_pliku, "r", encoding=enc).readlines()]
+# dane = [rekord.split(sep) for rekord in dane]
+# dane = [[r[0], r[1], float(r[2]), float(r[3])] for r in dane]
+# print(dane)
 
-# wynik printa:
-# [
-#     ['Jan', 'Nowak', 180.0, 80.0],
-#     ['Zdzisław', 'Kręcina', 160.0, 100.0],
-#     ['Marian', 'Koniuszko', 190.0, 60.0],
-#     ['Bogdan', 'Kowalski', 170.0, 90.0]
-# ]
+# # wynik printa:
+# # [
+# #     ['Jan', 'Nowak', 180.0, 80.0],
+# #     ['Zdzisław', 'Kręcina', 160.0, 100.0],
+# #     ['Marian', 'Koniuszko', 190.0, 60.0],
+# #     ['Bogdan', 'Kowalski', 170.0, 90.0]
+# # ]
 
-for rekord in dane:
-    bmi = rekord[3] / (rekord[2] / 100) ** 2
-    rekord.append(bmi)
+# for rekord in dane:
+#     bmi = rekord[3] / (rekord[2] / 100) ** 2
+#     rekord.append(bmi)
 
-# teraz dane wyglądają tak:
-# [
-#     ["Jan", "Nowak", 180.0, 80.0, 24.691358024691358],
-#     ["Zdzisław", "Kręcina", 160.0, 100.0, 39.06249999999999],
-#     ["Marian", "Koniuszko", 190.0, 60.0, 16.62049861495845],
-#     ["Bogdan", "Kowalski", 170.0, 90.0, 31.14186851211073],
-# ]
+# # teraz dane wyglądają tak:
+# # [
+# #     ["Jan", "Nowak", 180.0, 80.0, 24.691358024691358],
+# #     ["Zdzisław", "Kręcina", 160.0, 100.0, 39.06249999999999],
+# #     ["Marian", "Koniuszko", 190.0, 60.0, 16.62049861495845],
+# #     ["Bogdan", "Kowalski", 170.0, 90.0, 31.14186851211073],
+# # ]
 
-# "Jan;Nowak;24.691358024691358"
+# # "Jan;Nowak;24.691358024691358"
 
-# wersja 1 budowania linii wynikowej:
-# dane_do_zapisu = []
-# for r in dane :
-#     linia = f"{r[0]};{r[1]};{str(r[4])}\n"
-#     dane_do_zapisu.append(linia)
+# # wersja 1 budowania linii wynikowej:
+# # dane_do_zapisu = []
+# # for r in dane :
+# #     linia = f"{r[0]};{r[1]};{str(r[4])}\n"
+# #     dane_do_zapisu.append(linia)
 
-# wersja 2 budowania linii wynikowej:
-dane_do_zapisu = [f"{r[0]};{r[1]};{str(r[4])}\n" for r in dane]
+# # wersja 2 budowania linii wynikowej:
+# dane_do_zapisu = [f"{r[0]};{r[1]};{str(r[4])}\n" for r in dane]
 
 
-print(dane_do_zapisu)
-# wynik:
-# [
-#     "Jan;Nowak;24.691358024691358",
-#     "Zdzisław;Kręcina;39.06249999999999",
-#     "Marian;Koniuszko;16.62049861495845",
-#     "Bogdan;Kowalski;31.14186851211073",
-# ]
+# print(dane_do_zapisu)
+# # wynik:
+# # [
+# #     "Jan;Nowak;24.691358024691358",
+# #     "Zdzisław;Kręcina;39.06249999999999",
+# #     "Marian;Koniuszko;16.62049861495845",
+# #     "Bogdan;Kowalski;31.14186851211073",
+# # ]
 
-nazwa_pliku_wyjsciowego = "zawodnicy_bmi.csv"
-f = open(nazwa_pliku_wyjsciowego, "w", encoding=enc)
-f.writelines(dane_do_zapisu)
-f.close()
+# nazwa_pliku_wyjsciowego = "zawodnicy_bmi.csv"
+# f = open(nazwa_pliku_wyjsciowego, "w", encoding=enc)
+# f.writelines(dane_do_zapisu)
+# f.close()
+
+
+## Krotki - tuple
+
+# lista = [ 1, 2, 3]
+# krotka = (1, "2", 3.14, [123, 124, 15])
+# print(lista)
+# print(krotka)
+
+# lista = list( [1,2,3] )
+# krotka = tuple([1, 2, 3])
+# print(lista)
+# print(krotka)
+
+
+# print(krotka[2])
+# krotka[2] = "abc"
+# print(krotka[2])
+
+# krotka = ( 1, "abc", 3.14)
+# lista = list(krotka)
+# print(lista)
+# print(krotka)
+
+
+# krotka = (1, "abc", 3.14)
+# for e in krotka:
+#     print(e)
+
+
+# krotka = tuple( [i for i in range(10)]  )
+# print(krotka)
+
+# krotki można dodawać
+# k1 = (1, 2, 3)
+# k2 = (4, 5, 6)
+# print(k1 + k2)
+
+
+##### ZADANIE 24
+
+# Stwórz dwie krotki. Jedna ma zawierać 10 losowych liczb zakresu 1-10, druga 10 losowych liczb zakresu 11-20.
+# Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę wypisz na konsoli.
+
+
