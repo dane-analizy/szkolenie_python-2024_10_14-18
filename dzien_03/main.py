@@ -420,7 +420,7 @@
 # dane_wynikowe = []
 # for rekord in dane:
 #     dane_wynikowe.append(dict(zip(nazwy_kolumn, rekord)))
-    
+
 # print(dane_wynikowe)
 
 
@@ -430,11 +430,11 @@
 # Faker - sztuczne dane -> https://pypi.org/project/Faker/
 # pip install Faker
 
-from faker import Faker
+# from faker import Faker
 
 
-fake = Faker("pl_PL")
-print(fake.city())
+# fake = Faker("pl_PL")
+# print(fake.city())
 # print(fake.first_name())
 # print(fake.last_name())
 # print(fake.pesel())
@@ -463,4 +463,47 @@ print(fake.city())
 # context manager
 # with open(...) as f:
 #     f....
-    
+
+
+# from faker import Faker
+
+# fake = Faker("pl_PL")
+
+# lista_osob = []
+# for id in range(10_000):
+#     osoba = {
+#         "id": str(id+1),
+#         "imie": fake.first_name(),
+#         "nazwisko": fake.last_name(),
+#         "nazwa_firmy": fake.company(),
+#         "email": fake.email(),
+#         "ulica": fake.street_name(),
+#         "telefon": fake.phone_number(),
+#         "miasto": fake.city()
+#     }
+#     lista_osob.append(osoba)
+
+
+# lista_osob_do_pliku = [";".join(r.values())+"\n" for r in lista_osob]
+# with open("ludzie.csv", "w", encoding="utf-8") as f:
+#     f.writelines(lista_osob_do_pliku)
+
+
+# # sortowanie słownika po kluczu
+# import random
+
+# d = { random.randint(1,100) : random.randint(1000, 2000) for _ in range(10) }
+# print("Przed sorotowaniem:", d)
+
+# d_posostowane = dict(sorted(d.items()))
+# print("Po sortowaniu:", d_posostowane)
+
+# sortowanie słownika po wartości
+# import random
+
+# d = {random.randint(1, 100): random.randint(1000, 2000) for _ in range(10)}
+# print("Przed sorotowaniem:", d)
+
+# d_posostowane = dict(sorted(d.items(), key=lambda kv: kv[1] ))
+# print("Po sortowaniu:", d_posostowane)
+
