@@ -355,3 +355,7 @@
 # d['nazwisko'] = "Kowalski"
 # for k,v in d.items():
 #     print(f"{k} => {v}")
+
+# dodanie nowego klucza o wartości "wartość" o ile nie istniał
+# d["klucz"] = d.get("klucz", wartosc)
+
