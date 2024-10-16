@@ -496,4 +496,4 @@
 # print(l)
 
 l = [ [4, 1] , [6, 2], [7, 9], [2, 9] ]
-print(sorted(l, key=))
+print(sorted(l, key=..))
