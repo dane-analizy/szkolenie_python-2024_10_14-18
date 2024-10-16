@@ -194,24 +194,37 @@
 
 # lista plików
 
-import os
+# import os
 
-for element in os.walk("."):
-    sciezka = element[0]
-    lista_katalogow = element[1]
-    lista_plikow = element[2]
+# for element in os.walk("."):
+#     sciezka = element[0]
+#     lista_katalogow = element[1]
+#     lista_plikow = element[2]
 
-    # gdzie jestem?
-    print(f"Jestem na poziomie {sciezka}")
+#     # gdzie jestem?
+#     print(f"Jestem na poziomie {sciezka}")
 
-    # katalogi
-    print("Lista katalogów:")
-    for k in lista_katalogow:
-        print(f"\t- {k}")
+#     # katalogi
+#     print("Lista katalogów:")
+#     for k in lista_katalogow:
+#         print(f"\t- {k}")
 
-    # pliki
-    print("Lista plików:")
-    for p in lista_plikow:
-        print(f"\t- {p}")
+#     # pliki
+#     print("Lista plików:")
+#     for p in lista_plikow:
+#         print(f"\t- {p}")
 
-    print("="*40)
+#     print("="*40)
+
+
+
+
+### ZADANIE 25
+
+
+# Znajdź wszystkie pliki oraz katalogi, które w nazwie mają ciąg podany przez użytkownika.
+# Wyświetl ścieżkę i nazwę znalezionego pliku/katalogu oraz informację czy to plik czy katalog.
+# Jeśli chcesz - wyświetl to po przesortowaniu
+
+# if ciag in dlugi_ciag
+
