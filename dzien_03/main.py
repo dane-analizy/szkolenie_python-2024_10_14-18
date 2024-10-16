@@ -430,3 +430,37 @@
 # Faker - sztuczne dane -> https://pypi.org/project/Faker/
 # pip install Faker
 
+from faker import Faker
+
+
+fake = Faker("pl_PL")
+print(fake.city())
+# print(fake.first_name())
+# print(fake.last_name())
+# print(fake.pesel())
+
+
+#### ZADANIE 27
+
+# Korzystając z pakietu Faker wygeneruj plik zawierający 10 tysięcy rekordów składających się z:
+# id będące kolejną liczbą,
+# imię, -> first_name()
+# nazwisko, -> last_name()
+# nazwa firmy, -> company()
+# email, -> email()
+# telefon, -> phone_number()
+# miasto -> city()
+
+# proponowane podejście:
+# lista słowników z każdą z osób osobno - 1 słownik = 1 osoba
+# zapis list do pliku
+
+
+# f = open()
+# f....
+# f.close()
+
+# context manager
+# with open(...) as f:
+#     f....
+    
