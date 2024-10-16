@@ -181,3 +181,5 @@
 # Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę wypisz na konsoli.
 
 
+import random
+random.randint(1, 10)
