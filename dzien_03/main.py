@@ -507,3 +507,9 @@
 # d_posostowane = dict(sorted(d.items(), key=lambda kv: kv[1] ))
 # print("Po sortowaniu:", d_posostowane)
 
+
+
+### ZADANIE 28 
+
+# Korzystając z tekstu Pana Tadeusza w pliku pan-tadeusz.txt policz ile razy występuje każde ze słów.
+
