@@ -341,15 +341,15 @@
 #     print(d["imie"])
 # else:
 #     print("Nie mam klucza 'imie'")
-    
+
 # print( d.get("imie")  )
 
 # if d.get("ajfhwughwguwg"):
 #     print("ten klucz istnieje")
 # else:
 #     print("klucz nie istnieje")
-    
-    
+
+
 # print(d.get("imie", 0))
 
 # d['nazwisko'] = "Kowalski"
@@ -359,3 +359,50 @@
 # dodanie nowego klucza o wartości "wartość" o ile nie istniał
 # d["klucz"] = d.get("klucz", wartosc)
 
+
+# zip() -> przejście przez wiele list na raz
+
+# l1 = [1, 2, 3, 4, 5]
+# l2 = ["a", "b", "c", "d"]
+
+# print("iterator:")
+# for i in range(len(l1)):
+#     print(l1[i], l2[i])
+
+# print("enumarate() i iterator:")
+# for i, el1 in enumerate(l1):
+#     print(el1, l2[i])
+
+# print("zip():")
+# for el1, el2 in zip(l1, l2):
+#     print(el1, el2)
+
+
+# kluczem w słowniku może być np. tuple:
+# d = {
+#     (2024, 10, 15, 13, 30, 25, "ID123", "typwartosci"): 99,
+#     (2024, 10, 15, 13, 30, 25, "ID124", "typwartosci"): 199
+# }
+
+# print(d)
+
+
+# dict comprehention - słowniki składane
+
+# klucze = ("klucz1", "klucz2", "klucz3")
+# wartosci = [123, "abc", 5.67]
+
+# d = {k: v for k, v in zip(klucze, wartosci)}
+# print(d)
+
+# print(dict([(1, "a"), ("b", 2), ("klucz", "wartosc")]))
+# print(dict([[1, "a"], ["b", 2], ["klucz", "wartosc"]]))
+# print(dict(zip(klucze, wartosci)))
+
+
+# print({ p:2**p for p in range(10)})
+
+### ZADANIE 26
+
+# Przepisz dane z pliku zawodnicy.csv do listy słowników.
+# Niech klucze będą taki: imie, nazwisko, wzrost, waga
