@@ -305,16 +305,16 @@
 
 ### słowniki - dict()
 
-d = {
-    "klucz1": "wartosc1",
-    "klucz2": "wartosc2",
-    "klucz3": 123,
-    "klucz4": [1, 2, 3],
-    "klucz5": ("ab", "cd"),
-    "klucz6": {"k1": 1, "k2": "b", "k3": {"klucz5": ("ab", "cd")}},
-    "klucz1": "inna wartość 1",
-    # "imie": "Janek"
-}
+# d = {
+#     "klucz1": "wartosc1",
+#     "klucz2": "wartosc2",
+#     "klucz3": 123,
+#     "klucz4": [1, 2, 3],
+#     "klucz5": ("ab", "cd"),
+#     "klucz6": {"k1": 1, "k2": "b", "k3": {"klucz5": ("ab", "cd")}},
+#     "klucz1": "inna wartość 1",
+#     # "imie": "Janek"
+# }
 
 # print(d)
 
@@ -335,23 +335,23 @@ d = {
 #     print(f"Wartość: {v}")
 
 
-print(d['klucz3'])
+# print(d['klucz3'])
 
-if "imie" in d.keys():
-    print(d["imie"])
-else:
-    print("Nie mam klucza 'imie'")
+# if "imie" in d.keys():
+#     print(d["imie"])
+# else:
+#     print("Nie mam klucza 'imie'")
     
-print( d.get("imie")  )
+# print( d.get("imie")  )
 
-if d.get("ajfhwughwguwg"):
-    print("ten klucz istnieje")
-else:
-    print("klucz nie istnieje")
+# if d.get("ajfhwughwguwg"):
+#     print("ten klucz istnieje")
+# else:
+#     print("klucz nie istnieje")
     
     
-print(d.get("imie", 0))
+# print(d.get("imie", 0))
 
-d['nazwisko'] = "Kowalski"
-for k,v in d.items():
-    print(f"{k} => {v}")
+# d['nazwisko'] = "Kowalski"
+# for k,v in d.items():
+#     print(f"{k} => {v}")
