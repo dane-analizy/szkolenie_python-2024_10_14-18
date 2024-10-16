@@ -217,8 +217,6 @@
 #     print("="*40)
 
 
-
-
 ### ZADANIE 25
 
 
@@ -228,3 +226,21 @@
 
 # if ciag in dlugi_ciag
 
+import os
+
+ciag = input("Podaj fragment nazwy pliku lub katalogu, którego ma poszukać: ")
+
+for element in os.walk("."):
+    sciezka = element[0]
+    lista_katalogow = element[1]
+    lista_plikow = element[2]
+
+    # katalogi
+    for k in lista_katalogow:
+        if ciag in k:
+            print(f"{sciezka}: {k} (katalog)")
+
+    # pliki
+    for p in lista_plikow:
+        if ciag in p:
+            print(f"{sciezka}: {p} (plik)")
