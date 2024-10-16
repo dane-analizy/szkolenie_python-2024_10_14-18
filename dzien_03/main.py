@@ -293,3 +293,65 @@
 # print(z1.union(z2))
 # print(z1.difference(z2))
 # print(z2.difference(z1))
+
+# import random
+# z = { random.randint(1, 10) for _ in range(100)}
+# l = [random.randint(1, 10) for _ in range(100)]
+# print(z)
+# print(l)
+
+# l = list(set(l)) # <- usuwanie duplikatów z listy
+
+
+### słowniki - dict()
+
+d = {
+    "klucz1": "wartosc1",
+    "klucz2": "wartosc2",
+    "klucz3": 123,
+    "klucz4": [1, 2, 3],
+    "klucz5": ("ab", "cd"),
+    "klucz6": {"k1": 1, "k2": "b", "k3": {"klucz5": ("ab", "cd")}},
+    "klucz1": "inna wartość 1",
+    # "imie": "Janek"
+}
+
+# print(d)
+
+# klucze
+# print(d.keys())
+
+# wartości
+# print(d.values())
+
+# for v in d.values():
+#     print(type(v), v)
+#     if isinstance(v, dict):
+#         print("Wartość jest słownikiem")
+
+# iteracja po kluczu z otrzymaniem od razu wartości
+# for k,v in d.items():
+#     print(f"Klucz  : {k}")
+#     print(f"Wartość: {v}")
+
+
+print(d['klucz3'])
+
+if "imie" in d.keys():
+    print(d["imie"])
+else:
+    print("Nie mam klucza 'imie'")
+    
+print( d.get("imie")  )
+
+if d.get("ajfhwughwguwg"):
+    print("ten klucz istnieje")
+else:
+    print("klucz nie istnieje")
+    
+    
+print(d.get("imie", 0))
+
+d['nazwisko'] = "Kowalski"
+for k,v in d.items():
+    print(f"{k} => {v}")
