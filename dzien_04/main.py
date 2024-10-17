@@ -399,4 +399,14 @@
 
 # api - czytanie z usług sieciowych
 
+# https://httpbin.org/
+# https://it-tools.tech/
+
+# pakiet - requests - do zaintalowania
+# pip install requests
+
+
+
+
+
 # pytania na juniora
