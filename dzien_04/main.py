@@ -213,7 +213,6 @@
 # print(bmi(78, -1.80))
 
 
-
 ### DRY - Don't Repeat Yourself
 
 # def check_parameter(p):
@@ -222,7 +221,7 @@
 #     if p < 0:
 #         return False
 #     return True
-    
+
 
 # def bmi(waga_kg, wzrost_m):
 #     # sprawdzamy czy waga jest ok
@@ -246,6 +245,31 @@
 
 
 # moduły funkcji
+
+# import konkretnej funkcji z modułu
+# from modul_bmi import bmi
+# print(bmi(80, 1.80))
+
+# import wszystkiego z modułu
+# import modul_bmi
+# print(modul_bmi.bmi(80, 1.80))
+
+
+# argumenty domyślne
+
+# def funkcja(a=10, b=20, c=50):
+#     print(f"{a=}\n{b=}\n{c=}")
+
+# funkcja(1,2,6)
+# funkcja()
+
+#### ZADANIE 31
+
+# Napisz funkcję która zwróci pod postacią listy list zawartość pliku,
+# którego nazwę przekażemy przez pierwszy argument funkcji. Plik ma być otwarty
+# z kodowaniem podanym jako drugi argument funkcji. Jeśli kodowanie nie zostanie
+# podane ma przyjąć "utf-8".
+
 
 
 
