@@ -274,20 +274,30 @@
 
 
 # rozwiązanie -> w pliku "plik.py"
-from plik import load_file, split_lines
+# from plik import load_file, split_lines
 
-text = load_file("zawodnicy.csv")
-text_splited = split_lines(text, ";")
-print(text_splited)
+# text = load_file("zawodnicy.csv")
+# print(text)
+
+
 
 #### ZADANIE 32
 
 # Do modułu "plik" dodaj funkcję split_lines(), która rozbije listę linii z pliku na listę krotek
 # według podanego separatora.
 
-# split_lines(lista, separator)
+# rozwiązanie w pliku plik.py
 
-# [ (,,,), (,,,)]
+# from plik import load_file, split_lines
+
+# text = load_file("zawodnicy.csv")
+# text_splited = split_lines(text, ";")
+# print(text_splited)
+
+
+
+
+
 
 
 # wyjątki
