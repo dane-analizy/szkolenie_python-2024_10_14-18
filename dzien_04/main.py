@@ -502,9 +502,11 @@
 # rozwijamy nasze rozwiązanie
 
 import requests
+import time
 
 
 def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
+    time.sleep(0.1)
     url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
     res = requests.get(url)
     if res.status_code != 200:
@@ -536,6 +538,21 @@ print(w)
 # Używając funkcji get_nbp_rates() pobierz notowania dla EUR i USD z całego czerwca,
 # lipca i sierpnia 2024. Niech wynik będzie listą słowników.
 
+# wykorzystujemy funkcję z poprzedniego zadania
 
-# pytania na juniora
+
+import json
+
+pelne_notowania = []
+for m in [6, 7, 8]
+    for d in range(1, 32):
+        notowanie_z_dnia = get_nbp_rates(waluty=["EUR", "USD"], rok=2024, miesiac=m, dzien=d)
+        if notowanie_z_dnia:
+            for notowanie in notowanie_z_dnia:
+                pelne_notowania.append(notowanie)
+
+
+with open("notowania.json", "w", encoding="utf-8") as f:
+    json.dump(pelne_notowania, f)
+
 # pytania na juniora
