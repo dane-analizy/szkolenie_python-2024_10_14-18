@@ -1,3 +1,6 @@
+wersja_modulu = "Moduł Obliczenia, v0.1"
+
+
 def check_parameter(p):
     if not isinstance(p, (int, float)):
         return False

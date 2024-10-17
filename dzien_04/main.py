@@ -320,3 +320,4 @@ for zawodnik in zawodnicy:
 # pytania na juniora
 # pytania na juniora
 # pytania na juniora
+# pytania na juniora
