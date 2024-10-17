@@ -267,7 +267,7 @@
 
 #### ZADANIE 31
 
-# Napisz funkcję która zwróci pod postacią listy list zawartość pliku,
+# Napisz funkcję która zwróci pod postacią listy wierszy zawartość pliku,
 # którego nazwę przekażemy przez pierwszy argument funkcji. Plik ma być otwarty
 # z kodowaniem podanym jako drugi argument funkcji. Jeśli kodowanie nie zostanie
 # podane ma przyjąć "utf-8".
