@@ -498,42 +498,40 @@
 # get_nbp_rates(waluty=["GBP", "JPY"], rok=2023, miesiac=1, dzien=17)
 
 
-
 # rozwijamy nasze rozwiązanie
 
-import requests
-import time
+# import requests
+# import time
 
 
-def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
-    time.sleep(0.1)
-    url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
-    res = requests.get(url)
-    if res.status_code != 200:
-        return []
+# def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
+#     time.sleep(0.1)
+#     url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
+#     res = requests.get(url)
+#     if res.status_code != 200:
+#         return []
 
-    notowania = res.json()[0]
+#     notowania = res.json()[0]
 
-    wynik = []
-    for waluta in notowania["rates"]:
-        if waluta["code"] in waluty:
-            wynik.append(
-                {
-                    "kod":waluta["code"],
-                    "kurs":waluta["mid"],
-                    "data": notowania["effectiveDate"]
-                }
-            )
-            
-    return wynik
+#     wynik = []
+#     for waluta in notowania["rates"]:
+#         if waluta["code"] in waluty:
+#             wynik.append(
+#                 {
+#                     "kod":waluta["code"],
+#                     "kurs":waluta["mid"],
+#                     "data": notowania["effectiveDate"]
+#                 }
+#             )
 
-
-w = get_nbp_rates(waluty=["GBP", "JPY"], rok=2023, miesiac=1, dzien=17)
-print(w)
+#     return wynik
 
 
+# w = get_nbp_rates(waluty=["GBP", "JPY"], rok=2023, miesiac=1, dzien=17)
+# print(w)
 
-##### ZADANIE 37 
+
+##### ZADANIE 37
 
 # Używając funkcji get_nbp_rates() pobierz notowania dla EUR i USD z całego czerwca,
 # lipca i sierpnia 2024. Niech wynik będzie listą słowników.
@@ -541,18 +539,58 @@ print(w)
 # wykorzystujemy funkcję z poprzedniego zadania
 
 
-import json
+# import json
 
-pelne_notowania = []
-for m in [6, 7, 8]:
-    for d in range(1, 32):
-        notowanie_z_dnia = get_nbp_rates(waluty=["EUR", "USD"], rok=2024, miesiac=m, dzien=d)
-        if notowanie_z_dnia:
-            for notowanie in notowanie_z_dnia:
-                pelne_notowania.append(notowanie)
+# pelne_notowania = []
+# for m in [6, 7, 8]:
+#     for d in range(1, 32):
+#         notowanie_z_dnia = get_nbp_rates(waluty=["EUR", "USD"], rok=2024, miesiac=m, dzien=d)
+#         if notowanie_z_dnia:
+#             for notowanie in notowanie_z_dnia:
+#                 pelne_notowania.append(notowanie)
 
 
-with open("notowania.json", "w", encoding="utf-8") as f:
-    json.dump(pelne_notowania, f)
+# with open("notowania.json", "w", encoding="utf-8") as f:
+#     json.dump(pelne_notowania, f)
+
+
+### konfiguracja w pliku
+# import yaml
+
+# CONFIG_FILE = "config_test.yaml"
+
+# with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+#     config = yaml.safe_load(f)
+
+# print(config)
+
+# połącz_do_bazy(config)
+# config['db_name']
+# config['db_user']
+
 
 # pytania na juniora
+# tekst = """11111
+# 222222
+#                     333333
+# 4444
+# """
+
+# print(tekst)
+
+# del tekst
+
+# print(tekst)
+
+
+# a = 2
+# b = 5
+
+# c = a
+# a = b
+# b = c
+
+# a, b = b, a
+
+
+print("gwgwg")
