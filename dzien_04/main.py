@@ -263,13 +263,15 @@
 # funkcja(1,2,6)
 # funkcja()
 
+
+
 #### ZADANIE 31
 
 # Napisz funkcję która zwróci pod postacią listy list zawartość pliku,
 # którego nazwę przekażemy przez pierwszy argument funkcji. Plik ma być otwarty
 # z kodowaniem podanym jako drugi argument funkcji. Jeśli kodowanie nie zostanie
 # podane ma przyjąć "utf-8".
-
+# Funkcję tą umieść w module "plik.py" i w ramach  main.py z niej skorzystaj.
 
 
 
