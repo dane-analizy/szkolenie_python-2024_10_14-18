@@ -385,7 +385,7 @@
 # pełna konstukcja dla try..except:
 
 # try:
-#        # Some Code.... 
+#        # Some Code....
 # except:
 #        # optional block
 #        # Handling of exception (if required)
@@ -393,8 +393,6 @@
 #        # execute if no exception
 # finally:
 #       # Some code .....(always executed)
-
-
 
 
 # api - czytanie z usług sieciowych
@@ -436,7 +434,6 @@
 # print(type(dane))
 
 
-
 # import requests
 
 # url = "https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json"
@@ -454,6 +451,17 @@
 # Pobierz dane z https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json
 # wyświetl na konsoli aktualny kurs franka (chf), euro (eur) i dolara (usd) i pole effectiveDate
 
+import requests
+
+waluty = ["CHF", "EUR", "USD"]
+url = "https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json"
+
+res = requests.get(url)
+notowania = res.json()[0]
+
+for waluta in notowania["rates"]:
+    if waluta["code"] in waluty:
+        print(waluta["code"], waluta["mid"], notowania["effectiveDate"])
 
 
 # pytania na juniora
