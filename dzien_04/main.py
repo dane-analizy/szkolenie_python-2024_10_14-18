@@ -529,5 +529,13 @@ def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
 w = get_nbp_rates(waluty=["GBP", "JPY"], rok=2023, miesiac=1, dzien=17)
 print(w)
 
+
+
+##### ZADANIE 37 
+
+# Używając funkcji get_nbp_rates() pobierz notowania dla EUR i USD z całego czerwca,
+# lipca i sierpnia 2024. Niech wynik będzie listą słowników.
+
+
 # pytania na juniora
 # pytania na juniora
