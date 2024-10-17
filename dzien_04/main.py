@@ -405,8 +405,47 @@
 # pakiet - requests - do zaintalowania
 # pip install requests
 
+# import requests
+# try:
+#     response = requests.get("https://onetggeheh.pl")
+# except requests.exceptions.ConnectionError:
+#     print("Connection error")
+# except Exception as e:
+#     print(type(e))
+
+# import requests
+
+# response = requests.get("https://onet.pl/dupa")
+# print(response)
+
+# response = requests.get("https://onet.pl/")
+# print(response)
+
+
+# import requests
+
+# response = requests.get("https://httpbin.org/get")
+# response = requests.get("https://onet.pl")
+
+# if response.status_code == 200:
+#     print("Udało się pobrać treść")
+
+# print(response.content)
+# print(response.text)
+# dane = response.json()
+# print(type(dane))
 
 
 
+# import requests
+
+# url = "https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json"
+# res = requests.get(url)
+# notowania = res.json()[0]
+# # print(notowania)
+
+# print("data notowania:", notowania["effectiveDate"])
+# for waluta in notowania['rates']:
+#     print(waluta['code'], waluta['mid'])
 
 # pytania na juniora
