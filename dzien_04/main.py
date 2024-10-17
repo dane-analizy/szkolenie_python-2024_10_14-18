@@ -162,21 +162,21 @@
 # isinstance(obj, (klasa2, klasa2))
 
 
-def bmi(waga_kg, wzrost_m):
-    if not isinstance(waga_kg, (int, float)):
-        print("Waga musi być liczbą!")
-        return None
+# def bmi(waga_kg, wzrost_m):
+#     if not isinstance(waga_kg, (int, float)):
+#         print("Waga musi być liczbą!")
+#         return None
 
-    if not isinstance(wzrost_m, (int, float)):
-        print("Wzrost musi być liczbą!")
-        return None
+#     if not isinstance(wzrost_m, (int, float)):
+#         print("Wzrost musi być liczbą!")
+#         return None
 
-    wynik = round(waga_kg / (wzrost_m**2), 2)
-    return wynik
+#     wynik = round(waga_kg / (wzrost_m**2), 2)
+#     return wynik
 
 
-print(bmi(90, 1.80))
-print(bmi("alamakota", 1.80))
+# print(bmi(90, 1.80))
+# print(bmi("alamakota", 1.80))
 
 
 #### ZADANIE 30
@@ -184,6 +184,33 @@ print(bmi("alamakota", 1.80))
 # Do przygotowanej funkcji w poprzednim zadaniu dodaj sprawdzanie czy argumenty są odpowiednich
 # typów (isinstance) oraz czy ich wartości są sensowne (dodatnie). Jeśli typy albo wartości są złe
 # wypisz odpowiedni komunikat i zwróć None
+
+
+def bmi(waga_kg, wzrost_m):
+    # sprawdzamy czy waga jest ok
+    if not isinstance(waga_kg, (int, float)):
+        print("Waga musi być liczbą!")
+        return None
+    if waga_kg < 0:
+        print("Waga musi być dodatnia!")
+        return None
+
+    # sprawdzamy czy wzrost jest ok
+    if not isinstance(wzrost_m, (int, float)):
+        print("Wzrost musi być liczbą!")
+        return None
+    if wzrost_m < 0:
+        print("Wzrost musi być dodatni!")
+        return None
+
+    # możemy liczyć wynik
+    wynik = round(waga_kg / (wzrost_m**2), 2)
+    return wynik
+
+
+print(bmi(90, 1.80))
+print(bmi("alamakota", 1.80))
+print(bmi(78, -1.80))
 
 
 # wyjątki
