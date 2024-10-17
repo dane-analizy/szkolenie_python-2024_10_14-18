@@ -353,12 +353,32 @@
 
 # Wyświetl wynik dzielenia jedynki przez kolejne liczby z zakresu od -10 do 10. Obsłuż wyjątek
 
+# lista = [-2, -1, 0, 1, 2, "ala ma kota"]
+# for i in lista:
+#     print("i", i)
+#     try:
+#         wynik = 1/i
+#         print(wynik)
+#     except ZeroDivisionError:
+#         print("nie dziel przez zero")
+#     except TypeError:
+#         print(f"Ale do mnie to nie tak! Tak nie! Nie umiem dzielić 1 przez {i}")
+#     except Exception as e:
+#         print("nie udało się")
+#         print(e, type(e))
+        
+#     print()
+
+# raise ZeroDivisionError
 
 
+open("wgwgwgwg")
 
+#### ZADANIE 34
 
-
-
+# W module plik, w funkcji load_file() zabezpiecz się na przypadek kiedy plik nie istnieje, czyli
+# przechwyć wyjątek o typie FileNotFoundError
+# Jeśli zajdzie wyjątek - funkcja powinna zwrócić pustą listę.
 
 
 
