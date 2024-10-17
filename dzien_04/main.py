@@ -544,7 +544,7 @@ print(w)
 import json
 
 pelne_notowania = []
-for m in [6, 7, 8]
+for m in [6, 7, 8]:
     for d in range(1, 32):
         notowanie_z_dnia = get_nbp_rates(waluty=["EUR", "USD"], rok=2024, miesiac=m, dzien=d)
         if notowanie_z_dnia:
