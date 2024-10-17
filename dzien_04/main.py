@@ -165,8 +165,26 @@
 # BMI = waga (kg) / wzrost**2 (m)
 
 
+# isinstance(obj, (klasa2, klasa2))
 
 
+
+def bmi(waga_kg, wzrost_m):
+    if not isinstance(waga_kg, (int, float)):
+        print("Waga musi być liczbą!")
+        return None
+
+    if not isinstance(wzrost_m, (int, float)):
+        print("Wzrost musi być liczbą!")
+        return None
+
+    wynik = round(waga_kg / (wzrost_m**2),2)
+    return wynik
+
+
+    
+print(bmi(90, 1.80))
+print(bmi("alamakota", 1.80))
 
 
 
