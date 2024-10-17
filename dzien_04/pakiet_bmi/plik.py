@@ -5,3 +5,7 @@ def load_file(file_name, enc="utf-8"):
 
 def split_lines(lista, separator=";"):
     return [tuple(linia.split(separator)) for linia in lista]
+
+
+def clear_data(lista):
+    return [(r[0], r[1], float(r[2]) / 100, float(r[3])) for r in lista]
