@@ -464,11 +464,11 @@
 #         print(waluta["code"], waluta["mid"], notowania["effectiveDate"])
 
 
-rok = 2024
-miesiac = 10
-dzien = 17
-url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
-print(url)
+# rok = 2024
+# miesiac = 10
+# dzien = 17
+# url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
+# print(url)
 
 
 #### ZADANIE 36
@@ -477,4 +477,57 @@ print(url)
 # podanych jako argument walut z podanej jako argument (oddzielnie rok, miesiac i dzien) daty.
 
 
+# import requests
+
+
+# def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
+#     url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
+
+#     res = requests.get(url)
+
+#     if res.status_code != 200:
+#         return None
+
+#     notowania = res.json()[0]
+
+#     for waluta in notowania["rates"]:
+#         if waluta["code"] in waluty:
+#             print(waluta["code"], waluta["mid"], notowania["effectiveDate"])
+
+
+# get_nbp_rates(waluty=["GBP", "JPY"], rok=2023, miesiac=1, dzien=17)
+
+
+
+# rozwijamy nasze rozwiązanie
+
+import requests
+
+
+def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
+    url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
+    res = requests.get(url)
+    if res.status_code != 200:
+        return []
+
+    notowania = res.json()[0]
+
+    wynik = []
+    for waluta in notowania["rates"]:
+        if waluta["code"] in waluty:
+            wynik.append(
+                {
+                    "kod":waluta["code"],
+                    "kurs":waluta["mid"],
+                    "data": notowania["effectiveDate"]
+                }
+            )
+            
+    return wynik
+
+
+w = get_nbp_rates(waluty=["GBP", "JPY"], rok=2023, miesiac=1, dzien=17)
+print(w)
+
+# pytania na juniora
 # pytania na juniora
