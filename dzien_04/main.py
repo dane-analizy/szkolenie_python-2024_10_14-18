@@ -348,7 +348,6 @@
 # print("program idzie dalej")
 
 
-
 #### ZADANIE 33
 
 # Wyświetl wynik dzielenia jedynki przez kolejne liczby z zakresu od -10 do 10. Obsłuż wyjątek
@@ -366,13 +365,13 @@
 #     except Exception as e:
 #         print("nie udało się")
 #         print(e, type(e))
-        
+
 #     print()
 
 # raise ZeroDivisionError
 
 
-open("wgwgwgwg")
+# open("wgwgwgwg")
 
 #### ZADANIE 34
 
@@ -380,11 +379,24 @@ open("wgwgwgwg")
 # przechwyć wyjątek o typie FileNotFoundError
 # Jeśli zajdzie wyjątek - funkcja powinna zwrócić pustą listę.
 
+# rozwiązanie w pliku plik.py
+
+
+# pełna konstukcja dla try..except:
+
+# try:
+#        # Some Code.... 
+# except:
+#        # optional block
+#        # Handling of exception (if required)
+# else:
+#        # execute if no exception
+# finally:
+#       # Some code .....(always executed)
+
+
 
 
 # api - czytanie z usług sieciowych
 
-# pytania na juniora
-# pytania na juniora
-# pytania na juniora
 # pytania na juniora
