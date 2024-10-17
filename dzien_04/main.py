@@ -296,21 +296,40 @@
 
 ### pakiety -> zobacz katalog pakiet_bmi, zwróć uwagę na plik __init__.py !
 
-from pakiet_bmi.obliczenia import bmi
-from pakiet_bmi.plik import clear_data, load_file, split_lines
+# from pakiet_bmi.obliczenia import bmi
+# from pakiet_bmi.plik import clear_data, load_file, split_lines
 
 
-def wczytaj_zawodnikow(nazwa_pliku):
-    zawartosc_pliku = load_file(nazwa_pliku)
-    dane = split_lines(zawartosc_pliku)
-    dane_oczyszczone = clear_data(dane)
-    return dane_oczyszczone
+# def wczytaj_zawodnikow(nazwa_pliku):
+#     zawartosc_pliku = load_file(nazwa_pliku)
+#     dane = split_lines(zawartosc_pliku)
+#     dane_oczyszczone = clear_data(dane)
+#     return dane_oczyszczone
 
 
-zawodnicy = wczytaj_zawodnikow("zawodnicy.csv")
-for zawodnik in zawodnicy:
-    bmi_zawodnika = bmi(zawodnik[3], zawodnik[2])
-    print(f"{zawodnik[0]} {zawodnik[1]} ma BMI = {bmi_zawodnika}")
+# zawodnicy = wczytaj_zawodnikow("zawodnicy.csv")
+# for zawodnik in zawodnicy:
+#     bmi_zawodnika = bmi(zawodnik[3], zawodnik[2])
+#     print(f"{zawodnik[0]} {zawodnik[1]} ma BMI = {bmi_zawodnika}")
+
+# from pakiet_bmi import test
+# print(__name__)
+
+
+# from pakiet_bmi.test import funkcja_smiec
+# print(__name__)
+# funkcja_smiec()
+
+# from pakiet_bmi.test import funkcja_smiec
+
+
+# def main():
+#     funkcja_smiec()
+
+
+# if __name__ == "__main__":
+#     print("Uruchomiłeś plik main.py")
+#     main()
 
 
 # wyjątki
