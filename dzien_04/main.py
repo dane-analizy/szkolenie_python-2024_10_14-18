@@ -1,4 +1,4 @@
-# json i yaml - trzymanie konfiguracji
+##### json i yaml - trzymanie konfiguracji
 
 
 # json
@@ -94,10 +94,86 @@
 
 
 
-# funkcje
+##### funkcje
+
+# nazwa_pliku = "zawodnicy.csv"
+# sep = ";"
+# enc = "utf-8"
+
+# dane = [linia.strip() for linia in open(nazwa_pliku, "r", encoding=enc).readlines()]
+# dane = [rekord.split(sep) for rekord in dane]
+# dane = [[r[0], r[1], float(r[2]), float(r[3])] for r in dane]
+
+
+# def funkcja():
+#     print("jestem w funkcji")
+#     print("nadal jestem w funkcji")
+#     print("i już kończę")
+    
+# print("jestem poza funkcją")
+# funkcja()    
+# print("jestem poza funkcją")
+# funkcja()
+# print("jestem poza funkcją")
+
+
+
+# zasięg zmiennych
+# a = 5
+# print("przed definicją funkcji", a)
+
+# def wypisz_a():
+#     a = 10
+#     print("w funkcji:", a)
+
+# def wypisz_a2():
+#     print("druga funkcja", a)
+
+# print("poza funkcja po definicji", a)    
+# wypisz_a()
+# print("poza funkcja", a)
+# wypisz_a2()
+
+
+# argumenty funkcji
+# a=10
+# b=50
+# c=100
+# def dodaj(a, b):
+#     print(f"Suma {a} + {b} = {a+b}, a {c=}")
+
+# dodaj(2,4)
+
+
+#  zwracanie wartości
+
+# def odejmij(a, b):
+#     wynik = a - b
+#     print(f"{a} - {b} = {wynik}")
+#     return wynik
+
+# w = odejmij(10, 7)
+# print("wynik uzyskany z funkcji", w)
+
+
+
+#### ZADANIE 29
+
+# Przygotuj funkcję, która wyliczy na podstawie wagi i wzrostu (parametry) BMI z dokładnością do 2 miejsc
+# po przecinku.
+
+# BMI = waga (kg) / wzrost**2 (m)
+
+
+
+
+
+
+
 
 # wyjątki
 
 # api - czytanie z usług sieciowych
 
 # pytania na juniora
+
