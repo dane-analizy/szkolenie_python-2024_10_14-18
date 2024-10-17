@@ -24,7 +24,6 @@
 #     json.dump(l, f)
 
 
-
 # wczytanie danych z pliku JSON
 # import json
 
@@ -60,7 +59,6 @@
 #     json.dump(dane, f, indent=2, sort_keys=True)
 
 
-
 # print("działam")
 
 # from pathlib import Path
@@ -92,8 +90,6 @@
 # print(dane)
 
 
-
-
 ##### funkcje
 
 # nazwa_pliku = "zawodnicy.csv"
@@ -109,13 +105,12 @@
 #     print("jestem w funkcji")
 #     print("nadal jestem w funkcji")
 #     print("i już kończę")
-    
-# print("jestem poza funkcją")
-# funkcja()    
+
 # print("jestem poza funkcją")
 # funkcja()
 # print("jestem poza funkcją")
-
+# funkcja()
+# print("jestem poza funkcją")
 
 
 # zasięg zmiennych
@@ -129,7 +124,7 @@
 # def wypisz_a2():
 #     print("druga funkcja", a)
 
-# print("poza funkcja po definicji", a)    
+# print("poza funkcja po definicji", a)
 # wypisz_a()
 # print("poza funkcja", a)
 # wypisz_a2()
@@ -156,7 +151,6 @@
 # print("wynik uzyskany z funkcji", w)
 
 
-
 #### ZADANIE 29
 
 # Przygotuj funkcję, która wyliczy na podstawie wagi i wzrostu (parametry) BMI z dokładnością do 2 miejsc
@@ -168,7 +162,6 @@
 # isinstance(obj, (klasa2, klasa2))
 
 
-
 def bmi(waga_kg, wzrost_m):
     if not isinstance(waga_kg, (int, float)):
         print("Waga musi być liczbą!")
@@ -178,15 +171,19 @@ def bmi(waga_kg, wzrost_m):
         print("Wzrost musi być liczbą!")
         return None
 
-    wynik = round(waga_kg / (wzrost_m**2),2)
+    wynik = round(waga_kg / (wzrost_m**2), 2)
     return wynik
 
 
-    
 print(bmi(90, 1.80))
 print(bmi("alamakota", 1.80))
 
 
+#### ZADANIE 30
+
+# Do przygotowanej funkcji w poprzednim zadaniu dodaj sprawdzanie czy argumenty są odpowiednich
+# typów (isinstance) oraz czy ich wartości są sensowne (dodatnie). Jeśli typy albo wartości są złe
+# wypisz odpowiedni komunikat i zwróć None
 
 
 # wyjątki
@@ -194,4 +191,3 @@ print(bmi("alamakota", 1.80))
 # api - czytanie z usług sieciowych
 
 # pytania na juniora
-
