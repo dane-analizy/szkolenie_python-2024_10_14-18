@@ -448,4 +448,12 @@
 # for waluta in notowania['rates']:
 #     print(waluta['code'], waluta['mid'])
 
+
+#### ZADANIE 35
+
+# Pobierz dane z https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json
+# wyświetl na konsoli aktualny kurs franka (chf), euro (eur) i dolara (usd) i pole effectiveDate
+
+
+
 # pytania na juniora
