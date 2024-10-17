@@ -334,6 +334,34 @@
 
 # wyjątki
 
+# a = 10
+# b = 0
+
+# print(a/b)
+# print("przed trajem")
+
+# try:
+#     print(a/b)
+# except:
+#     print("nie udało się")
+
+# print("program idzie dalej")
+
+
+
+#### ZADANIE 33
+
+# Wyświetl wynik dzielenia jedynki przez kolejne liczby z zakresu od -10 do 10. Obsłuż wyjątek
+
+
+
+
+
+
+
+
+
+
 # api - czytanie z usług sieciowych
 
 # pytania na juniora
