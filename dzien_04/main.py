@@ -451,17 +451,30 @@
 # Pobierz dane z https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json
 # wyświetl na konsoli aktualny kurs franka (chf), euro (eur) i dolara (usd) i pole effectiveDate
 
-import requests
+# import requests
 
-waluty = ["CHF", "EUR", "USD"]
-url = "https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json"
+# waluty = ["CHF", "EUR", "USD"]
+# url = "https://api.nbp.pl/api/exchangerates/tables/A/2024-10-17/?format=json"
 
-res = requests.get(url)
-notowania = res.json()[0]
+# res = requests.get(url)
+# notowania = res.json()[0]
 
-for waluta in notowania["rates"]:
-    if waluta["code"] in waluty:
-        print(waluta["code"], waluta["mid"], notowania["effectiveDate"])
+# for waluta in notowania["rates"]:
+#     if waluta["code"] in waluty:
+#         print(waluta["code"], waluta["mid"], notowania["effectiveDate"])
+
+
+rok = 2024
+miesiac = 10
+dzien = 17
+url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok:04d}-{miesiac:02d}-{dzien:02d}/?format=json"
+print(url)
+
+
+#### ZADANIE 36
+
+# Korzystają z kodu powstałego w zadaniu 35 przygotuj funkcję, która pobierze kursy
+# podanych jako argument walut z podanej jako argument (oddzielnie rok, miesiac i dzien) daty.
 
 
 # pytania na juniora
