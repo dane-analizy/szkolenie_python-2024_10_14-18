@@ -1,0 +1,38 @@
+[
+    {
+        "haslo": "tajnehaslo",
+        "kod_pocztowy": "00-950",
+        "login": "login1",
+        "nazwa_tabeli": "tabela_z_danymi",
+        "pin": 1234,
+        "uzytkownik": {
+            "imie": "Jan",
+            "nazwisko": "Nowak",
+            "wiek": 50
+        }
+    },
+    {
+        "haslo": "tajnehaslo",
+        "kod_pocztowy": "00-950",
+        "login": "login2",
+        "nazwa_tabeli": "tabela_z_danymi",
+        "pin": 1234,
+        "uzytkownik": {
+            "imie": "Jan",
+            "nazwisko": "Nowak",
+            "wiek": 50
+        }
+    },
+    {
+        "haslo": "tajnehaslo",
+        "kod_pocztowy": "00-950",
+        "login": "login3",
+        "nazwa_tabeli": "tabela_z_danymi",
+        "pin": 1234,
+        "uzytkownik": {
+            "imie": "Jan",
+            "nazwisko": "Nowak",
+            "wiek": 50
+        }
+    }
+]
