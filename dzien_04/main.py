@@ -60,16 +60,40 @@
 #     json.dump(dane, f, indent=2, sort_keys=True)
 
 
+
+# print("działam")
+
+# from pathlib import Path
+
+# current_dir = Path().cwd() # <- katalog w którym jesteśmy
+# print(current_dir.absolute())
+
+
 # YAML
 # potrzeby pakiet PyYAML
 # pip install pyyaml
 
-print("działam")
 
-from pathlib import Path
+# przepisanie jsona na yamla
+# import json
+# import yaml
 
-current_dir = Path().cwd()
-print(current_dir.absolute())
+# with open("konfiguracja_3.json", "r", encoding="utf-8") as f:
+#     dane = json.load(f)
+
+# with open("konfiguracja_3.yaml", "w", encoding="utf-8") as f:
+#     yaml.dump(dane, f)
+
+# import yaml
+
+# with open("konfiguracja_3.yaml", "r", encoding="utf-8") as f:
+#     dane = yaml.safe_load(f)
+
+# print(dane)
+
+
+
+
 # funkcje
 
 # wyjątki
