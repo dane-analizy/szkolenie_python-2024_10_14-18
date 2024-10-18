@@ -56,3 +56,15 @@ conn_str = "postgresql+psycopg2://login:haslo@serwer:port/baza"
 conn_str = "postgresql+psycopg2://postgres:Password!@localhost:5432/postgres"
 
 engine = create_engine(conn_str)
+
+
+#### ZADANIE 38
+
+# Napisz funkcję load_config() która jako parametr
+# przyjmie nazwę pliku YAML z konfiguracją i wczyta tą konfigurację.
+# Na wyjściu funkcja ma zwrócić słownik z konfiguracją.
+
+
+def load_config(nazwa_pliku):
+    # vbwuvwbouvg
+    return config
