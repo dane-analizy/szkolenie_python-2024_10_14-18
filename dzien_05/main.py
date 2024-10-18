@@ -50,12 +50,12 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 # - pakiet do łączenia się z MS SQL
 # 	- pip install pymssql
 
-from sqlalchemy import create_engine
+# from sqlalchemy import create_engine
 
-conn_str = "postgresql+psycopg2://login:haslo@serwer:port/baza"
-conn_str = "postgresql+psycopg2://postgres:Password!@localhost:5432/postgres"
+# conn_str = "postgresql+psycopg2://login:haslo@serwer:port/baza"
+# conn_str = "postgresql+psycopg2://postgres:Password!@localhost:5432/postgres"
 
-engine = create_engine(conn_str)
+# engine = create_engine(conn_str)
 
 
 #### ZADANIE 38
@@ -65,6 +65,28 @@ engine = create_engine(conn_str)
 # Na wyjściu funkcja ma zwrócić słownik z konfiguracją.
 
 
+import yaml
+from sqlalchemy import create_engine
+
+
 def load_config(nazwa_pliku):
-    # vbwuvwbouvg
-    return config
+    slownik_konfig = {}
+    try:
+        with open(nazwa_pliku, "r", encoding="utf-8") as file:
+            slownik_konfig = yaml.safe_load(file)
+    except FileNotFoundError:
+        print(f"Plik {nazwa_pliku} nie został znaleziony.")
+
+    # sprawdzić czy potrzebne klucze w słowniku istnieją
+        
+    return slownik_konfig
+
+# CONFIG_FILE = "db_config.yaml"
+CONFIG_FILE = "db_config_lukasz.yaml"
+
+config = load_config(CONFIG_FILE)
+
+conn_str = f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
+# print(conn_str)
+engine = create_engine(conn_str)
+print(engine)
