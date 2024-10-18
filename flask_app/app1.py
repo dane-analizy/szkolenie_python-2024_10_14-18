@@ -1,3 +1,5 @@
+# świetny tutorial https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
 # Flask -> zainstaluj pakiet Flask: pip install Flask
 from flask import Flask, render_template
 
