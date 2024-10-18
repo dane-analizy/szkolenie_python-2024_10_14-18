@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walutowy Kurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        function redirectToCurrencyPage(event) {
+            event.preventDefault(); // Zapobiega domyślnemu przesyłaniu formularza
+            const currency = document.getElementById("currency").value;
+            const dateFrom = document.getElementById("dateFrom").value;
+            const dateTo = document.getElementById("dateTo").value;
+
+            // Sprawdzenie, czy wszystkie pola są wypełnione
+            if (currency && dateFrom && dateTo) {
+                const url = `/kurs/${currency}/${dateFrom}/${dateTo}`;
+                window.location.href = url; // Przekierowanie na nowy adres
+            } else {
+                alert("Proszę wypełnić wszystkie pola!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Kursy Walut</h1>
+
+    <form onsubmit="redirectToCurrencyPage(event)">
+        <label for="currency">Nazwa waluty:</label>
+        <select id="currency" name="currency" required>
+            <option value="EUR" selected>EUR</option>
+            <option value="USD">USD</option>
+        </select><br>
+
+        <label for="dateFrom">Data od:</label>
+        <input type="date" id="dateFrom" name="dateFrom" values="{{ data_od }}" required><br>
+
+        <label for="dateTo">Data do:</label>
+        <input type="date" id="dateTo" name="dateTo" values="{{ data_do }}" required><br>
+
+        <button type="submit">Pokaż kursy</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Kurs</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for kurs in parametry.notowanie %}
+            <tr>
+                <td>{{ kurs.data }}</td>
+                <td>{{ kurs.kurs }} PLN</td>
+            </tr>
+            {% endfor %}
+            <!-- Kolejne wiersze można dodać dynamicznie -->
+        </tbody>
+    </table>
+
+</body>
+
+</html>
