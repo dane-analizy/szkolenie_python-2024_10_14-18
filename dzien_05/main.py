@@ -65,46 +65,46 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 # Na wyjściu funkcja ma zwrócić słownik z konfiguracją.
 
 
-import yaml
-from sqlalchemy import create_engine, text
+# import yaml
+# from sqlalchemy import create_engine, text
 
 
-def load_config(nazwa_pliku):
-    slownik_konfig = {}
-    try:
-        with open(nazwa_pliku, "r", encoding="utf-8") as file:
-            slownik_konfig = yaml.safe_load(file)
-    except FileNotFoundError:
-        print(f"Plik {nazwa_pliku} nie został znaleziony.")
+# def load_config(nazwa_pliku):
+#     slownik_konfig = {}
+#     try:
+#         with open(nazwa_pliku, "r", encoding="utf-8") as file:
+#             slownik_konfig = yaml.safe_load(file)
+#     except FileNotFoundError:
+#         print(f"Plik {nazwa_pliku} nie został znaleziony.")
 
-    # sprawdzić czy potrzebne klucze w słowniku istnieją
-        
-    return slownik_konfig
+#     # sprawdzić czy potrzebne klucze w słowniku istnieją
 
-# CONFIG_FILE = "db_config.yaml"
-CONFIG_FILE = "db_config_lukasz.yaml"
+#     return slownik_konfig
 
-config = load_config(CONFIG_FILE)
+# # CONFIG_FILE = "db_config.yaml"
+# CONFIG_FILE = "db_config_lukasz.yaml"
 
-conn_str = f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
-# print(conn_str)
-engine = create_engine(conn_str)
-# print(engine)
+# config = load_config(CONFIG_FILE)
 
-conn = engine.connect()
-# print(conn)
+# conn_str = f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
+# # print(conn_str)
+# engine = create_engine(conn_str)
+# # print(engine)
 
-sql_query = "SELECT * FROM players;"
-res = conn.execute(text(sql_query))
+# conn = engine.connect()
+# # print(conn)
 
-res_list = list(res)
-print(res_list)
+# sql_query = "SELECT * FROM players;"
+# res = conn.execute(text(sql_query))
 
-for r in res:
-    print(r)
+# res_list = list(res)
+# print(res_list)
+
+# for r in res:
+#     print(r)
 
 
-conn.close()
+# conn.close()
 
 
 #### ZADANIE 39
@@ -118,3 +118,104 @@ conn.close()
 # - zbuduje listę krotek z wynikiem - > list(res)
 # - zamknie połączenie z bazą -> conn.close()
 # - zwróci listę wyników
+
+
+# import yaml
+# from sqlalchemy import create_engine, text
+
+
+# def load_config(nazwa_pliku):
+#     slownik_konfig = {}
+#     try:
+#         with open(nazwa_pliku, "r", encoding="utf-8") as file:
+#             slownik_konfig = yaml.safe_load(file)
+#     except FileNotFoundError:
+#         print(f"Plik {nazwa_pliku} nie został znaleziony.")
+#     return slownik_konfig
+
+
+# def get_connection_string(config):
+#     return f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
+
+
+# def get_db_data(engine, sql_query):
+#     res_list = []
+#     try:
+#         conn = engine.connect()
+#         res = conn.execute(text(sql_query))
+#         res_list = list(res)
+#         conn.close()
+#     except Exception as e:
+#         print(f"Błąd: {e}")
+
+#     return res_list
+
+
+# # CONFIG_FILE = "db_config.yaml"
+# CONFIG_FILE = "db_config_lukasz.yaml"
+
+# config = load_config(CONFIG_FILE)
+# conn_str = get_connection_string(config)
+# engine = create_engine(conn_str)
+# w = get_db_data(engine, "SELECT first_name, height FROM players;")
+# print(w)
+
+# print(w[0][1] * 4)
+
+
+
+### zapisywanie do bazy
+
+import yaml
+from sqlalchemy import create_engine, text
+
+
+def load_config(nazwa_pliku):
+    slownik_konfig = {}
+    try:
+        with open(nazwa_pliku, "r", encoding="utf-8") as file:
+            slownik_konfig = yaml.safe_load(file)
+    except FileNotFoundError:
+        print(f"Plik {nazwa_pliku} nie został znaleziony.")
+    return slownik_konfig
+
+
+def get_connection_string(config):
+    return f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
+
+
+# CONFIG_FILE = "db_config.yaml"
+CONFIG_FILE = "db_config_lukasz.yaml"
+
+config = load_config(CONFIG_FILE)
+conn_str = get_connection_string(config)
+engine = create_engine(conn_str)
+
+
+# to chcemy dodać (INSERT) do bazy
+osoba = {
+    "first_name": "Józek",
+    "last_name": "Nowak",
+    "height": 1.78,
+    "weight": 99
+}
+
+conn = engine.connect()
+conn.execute(
+    text("""
+        INSERT INTO players (first_name, last_name, height, weight)
+        VALUES (:first_name, :last_name, :height, :weight);
+        """),
+    osoba,
+)
+conn.commit()
+conn.close()
+
+
+conn.execute(
+    text("""
+SELECT * FROM tabelka
+WHERE kolumna1 > :wartosc1 AND kolumna2 <= :wartosc2
+"""),
+    {"wartosc1": 10, "wartosc2": 60}
+)
