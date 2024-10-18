@@ -166,56 +166,56 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 
 ### zapisywanie do bazy
 
-import yaml
-from sqlalchemy import create_engine, text
+# import yaml
+# from sqlalchemy import create_engine, text
 
 
-def load_config(nazwa_pliku):
-    slownik_konfig = {}
-    try:
-        with open(nazwa_pliku, "r", encoding="utf-8") as file:
-            slownik_konfig = yaml.safe_load(file)
-    except FileNotFoundError:
-        print(f"Plik {nazwa_pliku} nie został znaleziony.")
-    return slownik_konfig
+# def load_config(nazwa_pliku):
+#     slownik_konfig = {}
+#     try:
+#         with open(nazwa_pliku, "r", encoding="utf-8") as file:
+#             slownik_konfig = yaml.safe_load(file)
+#     except FileNotFoundError:
+#         print(f"Plik {nazwa_pliku} nie został znaleziony.")
+#     return slownik_konfig
 
 
-def get_connection_string(config):
-    return f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
+# def get_connection_string(config):
+#     return f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
 
 
-# CONFIG_FILE = "db_config.yaml"
-CONFIG_FILE = "db_config_lukasz.yaml"
+# # CONFIG_FILE = "db_config.yaml"
+# CONFIG_FILE = "db_config_lukasz.yaml"
 
-config = load_config(CONFIG_FILE)
-conn_str = get_connection_string(config)
-engine = create_engine(conn_str)
-
-
-# to chcemy dodać (INSERT) do bazy
-osoba = {
-    "first_name": "Józek",
-    "last_name": "Nowak",
-    "height": 1.78,
-    "weight": 99
-}
-
-conn = engine.connect()
-conn.execute(
-    text("""
-        INSERT INTO players (first_name, last_name, height, weight)
-        VALUES (:first_name, :last_name, :height, :weight);
-        """),
-    osoba,
-)
-conn.commit()
-conn.close()
+# config = load_config(CONFIG_FILE)
+# conn_str = get_connection_string(config)
+# engine = create_engine(conn_str)
 
 
-conn.execute(
-    text("""
-SELECT * FROM tabelka
-WHERE kolumna1 > :wartosc1 AND kolumna2 <= :wartosc2
-"""),
-    {"wartosc1": 10, "wartosc2": 60}
-)
+# # to chcemy dodać (INSERT) do bazy
+# osoba = {
+#     "first_name": "Józek",
+#     "last_name": "Nowak",
+#     "height": 1.78,
+#     "weight": 99
+# }
+
+# conn = engine.connect()
+# conn.execute(
+#     text("""
+#         INSERT INTO players (first_name, last_name, height, weight)
+#         VALUES (:first_name, :last_name, :height, :weight);
+#         """),
+#     osoba,
+# )
+# conn.commit()
+# conn.close()
+
+
+# conn.execute(
+#     text("""
+# SELECT * FROM tabelka
+# WHERE kolumna1 > :wartosc1 AND kolumna2 <= :wartosc2
+# """),
+#     {"wartosc1": 10, "wartosc2": 60}
+# )
