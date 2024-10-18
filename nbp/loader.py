@@ -21,7 +21,7 @@ from utils.utils import load_config
 CONFIG_FILE = "db_config_lukasz.yaml"
 
 lista_lat = [2024]
-lista_miesiecy = [9]
+lista_miesiecy = [1,2,3,4,5,6,7,8]
 lista_walut = ["EUR", "USD"]
 
 
