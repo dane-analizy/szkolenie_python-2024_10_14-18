@@ -3,7 +3,7 @@
 
 # SQLAlchemy -> pakiet do obsługi baz danych
 
-
+# https://dbeaver.io/
 # utworzenie tabelki:
 """
 create table players (
