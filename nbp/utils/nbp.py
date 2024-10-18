@@ -1,14 +1,15 @@
-import requests
 import time
+
+import requests
 
 
 def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
     """Funkcja pobiera notowania wskazanych walut na daną datę z API NBP.
-    
+
     Args:
         waluty  - lista kodów walut do pobrania
         rok     - rok
-    
+
     Returns:
         lista słowników z notowaniem
     """
@@ -25,15 +26,10 @@ def get_nbp_rates(waluty=["CHF", "EUR", "USD"], rok=2024, miesiac=10, dzien=17):
         if waluta["code"] in waluty:
             wynik.append(
                 {
-                    "kod": waluta["code"],
+                    "waluta": waluta["code"],
                     "kurs": waluta["mid"],
                     "data": notowania["effectiveDate"],
                 }
             )
 
     return wynik
-
-
-
-
-get_nbp_rates()

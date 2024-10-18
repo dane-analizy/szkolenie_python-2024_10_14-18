@@ -24,3 +24,5 @@ def get_db_data(engine, sql_query):
         conn.close()
     except Exception as e:
         print(f"Błąd: {e}")
+
+    return res_list
