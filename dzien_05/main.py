@@ -15,6 +15,7 @@ create table players (
 );
 """
 
+# dodanie przykładowych rekordów do tabeli:
 """
 insert into players (first_name,last_name,height,weight)  
 values ('Jan', 'Kowalski', 1.84, 85);  
@@ -34,3 +35,18 @@ values ('Chuck','Norris', 1.82, 78);
 insert into players (first_name,last_name,height,weight)  
 values ('Krzysztof','Jarzyna', 1.68, 70);
 """
+
+
+# SQLAlchemy -> pakiet do obsługi baz danych
+
+# pip install sqlalchemy
+# python -m pip install sqlalchemy
+# py -m pip install sqlalchemy
+
+# - pakiet do łączenia się z PostgreSQL
+# 	- pip install psycopg2
+# - pakiet do łączenia się z Oracle
+# 	-`pip install cx_oracle
+# - pakiet do łączenia się z MS SQL
+# 	- pip install pymssql
+
