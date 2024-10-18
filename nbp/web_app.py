@@ -22,7 +22,7 @@ def get_rates(config, waluta, data_od, data_do):
         AND data <= :data_do
     ORDER BY data ASC
     """),
-        {"waluta": waluta, "data_od": data_od, "data_do": data_do},
+        {"waluta": waluta.upper(), "data_od": data_od, "data_do": data_do},
     )
     conn.close()
 
