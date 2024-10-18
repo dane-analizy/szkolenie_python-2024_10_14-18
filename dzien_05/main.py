@@ -66,7 +66,7 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 
 
 import yaml
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 
 
 def load_config(nazwa_pliku):
@@ -89,4 +89,15 @@ config = load_config(CONFIG_FILE)
 conn_str = f"postgresql+psycopg2://{config['db_user']}:{config['db_pass']}@{config['db_host']}:{config['db_port']}/{config['db_name']}"
 # print(conn_str)
 engine = create_engine(conn_str)
-print(engine)
+# print(engine)
+
+conn = engine.connect()
+# print(conn)
+
+sql_query = "SELECT * FROM players;"
+res = conn.execute(text(sql_query))
+
+for r in res:
+    print(r)
+
+conn.close()
