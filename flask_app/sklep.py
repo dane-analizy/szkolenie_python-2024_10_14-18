@@ -1,7 +1,7 @@
 # Flask -> zainstaluj pakiet Flask: pip install Flask
 from flask import Flask, render_template
 
-app = Flask("nazwa_aplikacja_jeden")
+app = Flask("nazwa_aplikacja_sklep", template_folder="templates_sklep")
 
 
 @app.route("/")
@@ -25,7 +25,7 @@ def onas():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
 
 
 #### ZADANIE
