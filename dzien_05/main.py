@@ -50,3 +50,7 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 # - pakiet do łączenia się z MS SQL
 # 	- pip install pymssql
 
+from sqlalchemy import create_engine
+
+conn_str = "postgresql+psycopg2://login:haslo@serwer:port/baza""
+engine = create_engine(conn_str)
