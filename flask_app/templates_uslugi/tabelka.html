@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Zmienne</title>
+</head>
+
+<h1>tabelka:</h1>
+
+<table border="1">
+    <tr>
+        <td>Imie</td>
+        <td>Nazwisko</td>
+    </tr>
+    {% for osoba in osoby %}
+    <tr>
+        <td>{{ osoba.imie }}</td>
+        <td>{{ osoba.nazwisko }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<body>
+</body>
+
+</html>

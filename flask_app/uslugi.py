@@ -1,7 +1,7 @@
 # Flask -> zainstaluj pakiet Flask: pip install Flask
-from flask import Flask, request
+from flask import Flask, render_template, request
 
-app = Flask("nazwa_aplikacja_uslugi")
+app = Flask("nazwa_aplikacja_uslugi", template_folder="templates_uslugi")
 
 
 @app.route("/dodaj/<b>/<a>")
@@ -32,6 +32,21 @@ def witaj(imie=None):
 @app.route("/params")
 def params():
     return request.args
+
+
+@app.route("/zmienne")
+def zmienne():
+    return render_template("zmienne.html", imie="Łukasz", nazwisko="Kowalski")
+
+
+@app.route("/tabelka")
+def tabelka():
+    lista_osob = [
+        {"imie": "Jan", "nazwisko": "Nowak", "wzrost": 190},
+        {"imie": "Krzysztof", "nazwisko": "Kowalski", "waga": 100},
+        {"imie": "Mirek", "nazwisko": "Iksiński", "wiek": 50},
+    ]
+    return render_template("tabelka.html", osoby=lista_osob)
 
 
 if __name__ == "__main__":
