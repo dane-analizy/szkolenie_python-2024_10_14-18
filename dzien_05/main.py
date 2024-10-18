@@ -97,7 +97,24 @@ conn = engine.connect()
 sql_query = "SELECT * FROM players;"
 res = conn.execute(text(sql_query))
 
+res_list = list(res)
+print(res_list)
+
 for r in res:
     print(r)
 
+
 conn.close()
+
+
+#### ZADANIE 39
+
+# Korzystając z powyższego kodu przygotuj funkcję, która przyjmie:
+# - engine do bazy danych
+# - zapytanie SQL
+# a następnie wykona kroki:
+# - połączy się do bazy danych -> conn=engine.connect()
+# - wykona zapytanie -> conn.execute(text(...))
+# - zbuduje listę krotek z wynikiem - > list(res)
+# - zamknie połączenie z bazą -> conn.close()
+# - zwróci listę wyników
